@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Search on Bright&#39;s Blog</title>
-    <link>https://bright.github.io/search/</link>
+    <link>https://ibrights.github.io/search/</link>
     <description>Recent content in Search on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     
-	<atom:link href="https://bright.github.io/search/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ibrights.github.io/search/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

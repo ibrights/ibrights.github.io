@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>科技分享 on Bright&#39;s Blog</title>
-    <link>https://bright.github.io/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/</link>
+    <link>https://ibrights.github.io/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/</link>
     <description>Recent content in 科技分享 on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://bright.github.io/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ibrights.github.io/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>解决蜗牛星际B双安装黑群晖失败“文件已损毁（13）”</title>
-      <link>https://bright.github.io/post/blog20210423/</link>
+      <link>https://ibrights.github.io/post/blog20210423/</link>
       <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20210423/</guid>
+      <guid>https://ibrights.github.io/post/blog20210423/</guid>
       <description>去年疫情期间，由于滞留家中实在无聊，我开始折腾软路由和 DIY NAS，而被折腾得最多的莫过于黑群晖系统。为此，我特意买来两台蜗牛星际（B双和C），其中B双用作软路由，C则用于黑群晖。时隔一年，忙于工作的我已不再有闲暇时间折腾黑群晖，而出于对数据安全和便捷性的考虑，我于今年年初购买了一台威联通的 NAS 主机。俗话说得好，黑群晖折腾到头，就会转去白群辉。但奈何威联通的性价比</description>
     </item>
     
     <item>
       <title>Openwrt Luci Openvpn 服务器多设备同时接入</title>
-      <link>https://bright.github.io/post/blog20210413/</link>
+      <link>https://ibrights.github.io/post/blog20210413/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20210413/</guid>
+      <guid>https://ibrights.github.io/post/blog20210413/</guid>
       <description>我们日常使用的 Openwrt 软路由系统几乎都集成了 Luci 界面，它不仅可以为用户提供便利的可视化后台管理界面，还在各路大神的贡献下，适配了众多简单易用的图形化 App。Luci-app-openvpn-server 就是众多 Luci 应用中最常用的 VPN 服务器之一。 简单来说，luci-app-openvpn-server 就是 Openvpn 服务器端的 Luci 界面版本。有了它，你就可以告别难搞的命令行，通过图形化</description>
     </item>
     
     <item>
       <title>利用 Docker 搭建 Trilium Notes 服务器</title>
-      <link>https://bright.github.io/post/blog20210320/</link>
+      <link>https://ibrights.github.io/post/blog20210320/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20210320/</guid>
+      <guid>https://ibrights.github.io/post/blog20210320/</guid>
       <description>由于平时需要处理大量结构复杂的内容，并且各内容板块间还存在相互交叉的引用关系，因此长久以来我一直在寻找一款既能满足需求，又简洁易用的内容管理工具。印象笔记或 OneNote 等笔记类服务似乎最为常见，但一来，将所有的私人内容存储在商业公司的服务器上总会让我缺乏安全感；二来这些软件要么不够轻便，要么对重要功能额外收费，因此一直都无法让我十分满意。 两年前，我接触到一款叫做 Notion 的跨</description>
     </item>
     
     <item>
       <title>通过群晖与 Openwrt 软路由实现自动端口映射</title>
-      <link>https://bright.github.io/post/blog20200914/</link>
+      <link>https://ibrights.github.io/post/blog20200914/</link>
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200914/</guid>
+      <guid>https://ibrights.github.io/post/blog20200914/</guid>
       <description>要在家庭或公司的局域网以外（俗称外网）访问家中或公司内网的设备（例如 NAS），通常有两种方式。第一种方式是在局域网的路由器上架设一个 VPN 服务器，再将外网的终端设备作为 VPN 客户端接入内网。在这种情况下，VPN（虚拟专有网络）充当了网线的角色，即接入 VPN 的外网设备，就相当于拉了一根通往内网的网线。因此在 VPN 网络中，即使这根网线是虚拟的，也能实现如同身处局域网内一般的访问</description>
     </item>
     
     <item>
       <title>利用 NAS、Docker 和 Calibre Web 搭建个人线上书库</title>
-      <link>https://bright.github.io/post/blog20200512/</link>
+      <link>https://ibrights.github.io/post/blog20200512/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200512/</guid>
+      <guid>https://ibrights.github.io/post/blog20200512/</guid>
       <description>经常阅读电子书并且用过 Kindle 的人应该都体会过整理电子书时的痛苦。尤其是像我这种经常下载电子书文件再导入到 Kindle 上进行阅读的人（或是为了省钱、或是因为 Kindle 商城中没有我们想要阅读的书），对于那些有着各自不同的标题、作者、封面，以及文件格式的纷繁复杂的电子书，缺乏一套行之有效的管理方案，进而充分管理自己的阅读进度与时间。 长期以来，PC 和 Mac 端的 Calibre 都是一个差强人意的电子书管理解</description>
     </item>
     
     <item>
       <title>可能是最好用的记忆辅助工具 Anki</title>
-      <link>https://bright.github.io/post/blog20200326/</link>
+      <link>https://ibrights.github.io/post/blog20200326/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200326/</guid>
+      <guid>https://ibrights.github.io/post/blog20200326/</guid>
       <description>对包括我在内的相当一部分人来说，记单词几乎已经成为一种刚需。无论是为了应付考试、取得各类等级证书还是单纯提高语言能力，词汇都是我们不得不正面应对的挑战。而在如今这个互联网时代，捧着厚重的词汇书或者词典进行背诵的方式已经被大多数人所抛弃，因为它既枯燥又低效，不仅会消磨我们学习一门语言的热情，还不利于培养语感、付诸实用。 在这样的背景下，一众“背单词”软件应运而生</description>
     </item>
     
     <item>
       <title>MacOS 10.15.4 更新 iCloud 文件分享功能</title>
-      <link>https://bright.github.io/post/blog20200325/</link>
+      <link>https://ibrights.github.io/post/blog20200325/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200325/</guid>
+      <guid>https://ibrights.github.io/post/blog20200325/</guid>
       <description>不得不说，相比于国外而言，中国国内的公共网盘生态好似一潭死水。这其中固然也有厂商不思进取的缘故，但更主要的还是政府对网络信息的严密审查，使得公共网盘服务提供商很难在维持自身生存和提升用户体验之间取得平衡。 经过几年前的一阵腥风血雨之后，目前国内叫得上号的公共网盘只剩下百度网盘、域通网盘和坚果云等。其中最臭名昭著的非百度莫属，其不仅对非会员用户有着苛刻的功能限制</description>
     </item>
     
     <item>
       <title>利用 Hugo 和 Github Pages 搭建自己的个人博客</title>
-      <link>https://bright.github.io/post/blog20200310/</link>
+      <link>https://ibrights.github.io/post/blog20200310/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200310/</guid>
+      <guid>https://ibrights.github.io/post/blog20200310/</guid>
       <description>如你所见，此博客是一个完全静态的 HTML 站点。相比于 PHP 编写的动态站点，静态站点不仅访问速度更快，而且部署门槛低。一个完全不会编程的新手，只要花点时间掌握一些工具的用法，也能轻松建立属于自己的站点。 本站由 Hugo 渲染而成。它的使用方式非常简单，想要自学的朋友可以阅读 Hugo 的官方文档。与其他博客系统一样，Hugo 也拥有着众多简介美观的主题，本站所使用的皮肤是 maupassant</description>
     </item>
     

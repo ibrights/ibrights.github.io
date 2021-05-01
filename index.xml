@@ -2,228 +2,228 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bright&#39;s Blog</title>
-    <link>https://bright.github.io/</link>
+    <link>https://ibrights.github.io/</link>
     <description>Recent content on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://bright.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ibrights.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>解决蜗牛星际B双安装黑群晖失败“文件已损毁（13）”</title>
-      <link>https://bright.github.io/post/blog20210423/</link>
+      <link>https://ibrights.github.io/post/blog20210423/</link>
       <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20210423/</guid>
+      <guid>https://ibrights.github.io/post/blog20210423/</guid>
       <description>去年疫情期间，由于滞留家中实在无聊，我开始折腾软路由和 DIY NAS，而被折腾得最多的莫过于黑群晖系统。为此，我特意买来两台蜗牛星际（B双和C），其中B双用作软路由，C则用于黑群晖。时隔一年，忙于工作的我已不再有闲暇时间折腾黑群晖，而出于对数据安全和便捷性的考虑，我于今年年初购买了一台威联通的 NAS 主机。俗话说得好，黑群晖折腾到头，就会转去白群辉。但奈何威联通的性价比</description>
     </item>
     
     <item>
       <title>告别，为了新的开始：记一次迂回的返乡行</title>
-      <link>https://bright.github.io/post/blog20210416/</link>
+      <link>https://ibrights.github.io/post/blog20210416/</link>
       <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20210416/</guid>
+      <guid>https://ibrights.github.io/post/blog20210416/</guid>
       <description>起因 我不知道此时的我正带着怎样的心情写这篇游记，因为它本来算不上游记——返回自己的家乡怎么能算旅行呢？但当我终于站在凌晨一点的芜湖站东广场时，我才明确意识到：终于回家了。 一切开始于一周前。在一个阴郁的下午，我独自走在成都大熊猫基地的竹荫路上，漫无目的地思考着——关于工作、关于婚姻，甚至关于一些无关紧要的东西。大熊猫并没有太吸引我，毕竟都是长相相似的生物，看一</description>
     </item>
     
     <item>
       <title>Openwrt Luci Openvpn 服务器多设备同时接入</title>
-      <link>https://bright.github.io/post/blog20210413/</link>
+      <link>https://ibrights.github.io/post/blog20210413/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20210413/</guid>
+      <guid>https://ibrights.github.io/post/blog20210413/</guid>
       <description>我们日常使用的 Openwrt 软路由系统几乎都集成了 Luci 界面，它不仅可以为用户提供便利的可视化后台管理界面，还在各路大神的贡献下，适配了众多简单易用的图形化 App。Luci-app-openvpn-server 就是众多 Luci 应用中最常用的 VPN 服务器之一。 简单来说，luci-app-openvpn-server 就是 Openvpn 服务器端的 Luci 界面版本。有了它，你就可以告别难搞的命令行，通过图形化</description>
     </item>
     
     <item>
       <title>利用 Docker 搭建 Trilium Notes 服务器</title>
-      <link>https://bright.github.io/post/blog20210320/</link>
+      <link>https://ibrights.github.io/post/blog20210320/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20210320/</guid>
+      <guid>https://ibrights.github.io/post/blog20210320/</guid>
       <description>由于平时需要处理大量结构复杂的内容，并且各内容板块间还存在相互交叉的引用关系，因此长久以来我一直在寻找一款既能满足需求，又简洁易用的内容管理工具。印象笔记或 OneNote 等笔记类服务似乎最为常见，但一来，将所有的私人内容存储在商业公司的服务器上总会让我缺乏安全感；二来这些软件要么不够轻便，要么对重要功能额外收费，因此一直都无法让我十分满意。 两年前，我接触到一款叫做 Notion 的跨</description>
     </item>
     
     <item>
       <title>身后，岸边，安徽全椒县</title>
-      <link>https://bright.github.io/post/blog20201231/</link>
+      <link>https://ibrights.github.io/post/blog20201231/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20201231/</guid>
+      <guid>https://ibrights.github.io/post/blog20201231/</guid>
       <description>此刻的我，正坐在巴南工业区的某间宿舍里，对着充满指纹的笔记本电脑，回想着在这艰难的一年里，任何能够使我留恋的事物。 按照惯例，我在写狗屁不通的所谓年终总结时，会戴着耳机，单曲循环一首多少能够令我或感慨、或亢奋的音乐。而今年，我一直在听的，还是李志在2018年跨年演唱会上的那首不插电版的《热河》。说来吊诡，这首歌明明叫“热河”，写的确是南京。就像我在上海时每天都</description>
     </item>
     
     <item>
       <title>通过群晖与 Openwrt 软路由实现自动端口映射</title>
-      <link>https://bright.github.io/post/blog20200914/</link>
+      <link>https://ibrights.github.io/post/blog20200914/</link>
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200914/</guid>
+      <guid>https://ibrights.github.io/post/blog20200914/</guid>
       <description>要在家庭或公司的局域网以外（俗称外网）访问家中或公司内网的设备（例如 NAS），通常有两种方式。第一种方式是在局域网的路由器上架设一个 VPN 服务器，再将外网的终端设备作为 VPN 客户端接入内网。在这种情况下，VPN（虚拟专有网络）充当了网线的角色，即接入 VPN 的外网设备，就相当于拉了一根通往内网的网线。因此在 VPN 网络中，即使这根网线是虚拟的，也能实现如同身处局域网内一般的访问</description>
     </item>
     
     <item>
       <title>开学计</title>
-      <link>https://bright.github.io/post/blog20200913/</link>
+      <link>https://ibrights.github.io/post/blog20200913/</link>
       <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200913/</guid>
+      <guid>https://ibrights.github.io/post/blog20200913/</guid>
       <description>所谓的“14天自我健康管理”制度，亦即“14天隔离”制度的美化提法，真是一个彻底的懒政行为。今天下午，当我拖着一大箱行李以及一大包快递（里面装着用于替换的被褥，我之所以要抱着它到处跑，正是因为封闭管理的学校不让快递员进入，从而使我不得不自己去菜鸟驿站取件并带回学校）来到光复西路的校门前时，一个笨手笨脚的保安让我们排队进行“身份验证”。由于那个该死的人脸识别系</description>
     </item>
     
     <item>
       <title>华为“南泥湾”项目与中国社会的内卷化</title>
-      <link>https://bright.github.io/post/blog20200804/</link>
+      <link>https://ibrights.github.io/post/blog20200804/</link>
       <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200804/</guid>
+      <guid>https://ibrights.github.io/post/blog20200804/</guid>
       <description>华为启动“南泥湾”项目 今天，网络上突然传出一则关于华为的新闻。《科创板日报》报道，华为已启动“南泥湾”项目，加速推进其笔记本电脑和智能电视等产品的开发，意在规避含有美国技术的产品。这标志着，在日益严峻的外部压力下，华为不得不将其注意力从 5g、芯片等技术密度较高的领域移开，转而投入到电子消费品等技术密度较低的领域。因为相比于前者，对电子消费品的投入不仅能够规避</description>
     </item>
     
     <item>
       <title>天灾与民生，孟子的社会福利观</title>
-      <link>https://bright.github.io/post/blog20200728/</link>
+      <link>https://ibrights.github.io/post/blog20200728/</link>
       <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200728/</guid>
+      <guid>https://ibrights.github.io/post/blog20200728/</guid>
       <description>今年夏天，我国南方地区遭受了史上罕见的洪涝灾害。许多农村地区的居民由于泄洪或决堤，不仅蒙受了巨大的经济损失，还不得不离开自己的家乡，成为流落异地的难民。在巨大的损失与伤痛面前，对政策的质疑和指责就会不可避免地出现。不少因泄洪而濒临破产或无家可归的居民，通过社交网络表达了自己的抱怨。这些抱怨在多数情况下能够得到网民的认可与同情，但批评与指责也随之而来。 批评者认</description>
     </item>
     
     <item>
       <title>关于谷月tv</title>
-      <link>https://bright.github.io/about/</link>
+      <link>https://ibrights.github.io/about/</link>
       <pubDate>Fri, 24 Jul 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://bright.github.io/about/</guid>
+      <guid>https://ibrights.github.io/about/</guid>
       <description>你可以从以下渠道找到谷月tv 的完整节目。注意，部分渠道在国内可能无法访问，谷月tv 在此不会提供任何访问上的解决方案，请自行搜索相关方法。 官方博客（谷月部落）； YouTube频道； Twitter； Podcast：你可以在任何一个主流播客平台（如 Apple Podcasts 和 Spotify）通过搜索“格物志”或者“谷月杂谈”等节目名称找到我的所有节目的音频版。你也可以通过以下 RSS 链接订阅</description>
     </item>
     
     <item>
       <title>游戏的流媒体化趋势于中国的版权拉锯战</title>
-      <link>https://bright.github.io/post/blog20200628/</link>
+      <link>https://ibrights.github.io/post/blog20200628/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200628/</guid>
+      <guid>https://ibrights.github.io/post/blog20200628/</guid>
       <description>多年以后，当我翻开这本已经发霉的、十多年前的光碟簿时，我想起中学时代、的那些闷热的下午，挤进电脑城二楼的小隔间，挑选盗版游戏光碟的日子。那个时代，中国正处于游戏机尚未解禁，数字版权没有普及，实体渠道极为稀少的年代。那时候的穷学生们，只能靠这种街边的盗版光碟，以及破解游戏论坛接触和游玩最新的单机游戏。我也不例外。 与传统音像产业类似，中国电子游戏的盗版时代，随着</description>
     </item>
     
     <item>
       <title>饱受批评的《最后生还者2》：自我表达与大众需求间的矛盾</title>
-      <link>https://bright.github.io/post/blog20200622/</link>
+      <link>https://ibrights.github.io/post/blog20200622/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200622/</guid>
+      <guid>https://ibrights.github.io/post/blog20200622/</guid>
       <description>6月19号，曾被许多玩家奉为神作的索尼 PlayStation 第一方大作《最后生还者》终于解锁了它的续作。然而，尽管此前一众游戏媒体都对《最后生还者2》给予了极高的评价，但游戏发售的仅仅第二天，其在 Metacritic 上的评分被玩家刷到了 3.8 的低分。媒体与玩家对《最后生还者2》两极分化的评价，更是将这款原本应该成为2020年度游戏有力竞争者的3A大作推上了风口浪尖。 玩家对《最后生还者2》如此失望乃至</description>
     </item>
     
     <item>
       <title>缪可馨的悲剧是我们共同的悲剧</title>
-      <link>https://bright.github.io/post/blog20200617/</link>
+      <link>https://ibrights.github.io/post/blog20200617/</link>
       <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200617/</guid>
+      <guid>https://ibrights.github.io/post/blog20200617/</guid>
       <description>最近，江苏常州金坛区的一名小学生坠楼事件传遍了中文互联网。其实我本来是不太想专门出一期节目来讨论这件事情的，毕竟小女孩刚走没多久，把这件事情翻出来蹭热点、吸流量确实不太好。但我转念一想，逝者已矣，生者奋发。我们这些多多少少体会过缪可馨感受的人，是时候站出来好好讨论以下，如何避免类似的悲剧再次发生了。 我今天主要想讨论两个问题。首先，关于很多人都在批评的“传递正</description>
     </item>
     
     <item>
       <title>十分钟读懂政治光谱</title>
-      <link>https://bright.github.io/post/blog20200616/</link>
+      <link>https://ibrights.github.io/post/blog20200616/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200616/</guid>
+      <guid>https://ibrights.github.io/post/blog20200616/</guid>
       <description>许多出生在新时代的后浪们可能并不了解，就在不远的几十年前，我们国家还会以“左”和“右”来划分人群。而这里所说的“左右”是一个政治学指标，它被广泛地用于划分每个人的政治倾向。在法国大革命时期，当时的国民议会中既有皇室贵族、宗教人士，也有新兴资本家和城市手工业者。前者坐在议会大厅的右侧，支持君主制和天主教会；而后者则坐在大厅左侧，支持共和制，反对教会独裁。从此，</description>
     </item>
     
     <item>
       <title>弗洛伊德事件与美国的种族歧视传统</title>
-      <link>https://bright.github.io/post/blog20200613/</link>
+      <link>https://ibrights.github.io/post/blog20200613/</link>
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200613/</guid>
+      <guid>https://ibrights.github.io/post/blog20200613/</guid>
       <description>弗洛伊德事件的前因后果 2020年5月25日，在美国明尼苏达州，一位名叫乔治·弗洛伊德（George Floyd）的非裔美国人在被逮捕的过程中被一名当地的白人警察过失杀害。这一事件成为一场全国性暴乱的导火索，美国各州相继爆发了大大小小的抗议活动。这些抗议活动从最初的和平游行发展成了暴力的打砸抢烧，各地都出现了商店被暴徒打砸并洗劫一空的恶性事件。 故事的起因还要从2</description>
     </item>
     
     <item>
       <title>利用 NAS、Docker 和 Calibre Web 搭建个人线上书库</title>
-      <link>https://bright.github.io/post/blog20200512/</link>
+      <link>https://ibrights.github.io/post/blog20200512/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200512/</guid>
+      <guid>https://ibrights.github.io/post/blog20200512/</guid>
       <description>经常阅读电子书并且用过 Kindle 的人应该都体会过整理电子书时的痛苦。尤其是像我这种经常下载电子书文件再导入到 Kindle 上进行阅读的人（或是为了省钱、或是因为 Kindle 商城中没有我们想要阅读的书），对于那些有着各自不同的标题、作者、封面，以及文件格式的纷繁复杂的电子书，缺乏一套行之有效的管理方案，进而充分管理自己的阅读进度与时间。 长期以来，PC 和 Mac 端的 Calibre 都是一个差强人意的电子书管理解</description>
     </item>
     
     <item>
       <title>可能是最好用的记忆辅助工具 Anki</title>
-      <link>https://bright.github.io/post/blog20200326/</link>
+      <link>https://ibrights.github.io/post/blog20200326/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200326/</guid>
+      <guid>https://ibrights.github.io/post/blog20200326/</guid>
       <description>对包括我在内的相当一部分人来说，记单词几乎已经成为一种刚需。无论是为了应付考试、取得各类等级证书还是单纯提高语言能力，词汇都是我们不得不正面应对的挑战。而在如今这个互联网时代，捧着厚重的词汇书或者词典进行背诵的方式已经被大多数人所抛弃，因为它既枯燥又低效，不仅会消磨我们学习一门语言的热情，还不利于培养语感、付诸实用。 在这样的背景下，一众“背单词”软件应运而生</description>
     </item>
     
     <item>
       <title>MacOS 10.15.4 更新 iCloud 文件分享功能</title>
-      <link>https://bright.github.io/post/blog20200325/</link>
+      <link>https://ibrights.github.io/post/blog20200325/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200325/</guid>
+      <guid>https://ibrights.github.io/post/blog20200325/</guid>
       <description>不得不说，相比于国外而言，中国国内的公共网盘生态好似一潭死水。这其中固然也有厂商不思进取的缘故，但更主要的还是政府对网络信息的严密审查，使得公共网盘服务提供商很难在维持自身生存和提升用户体验之间取得平衡。 经过几年前的一阵腥风血雨之后，目前国内叫得上号的公共网盘只剩下百度网盘、域通网盘和坚果云等。其中最臭名昭著的非百度莫属，其不仅对非会员用户有着苛刻的功能限制</description>
     </item>
     
     <item>
       <title>当我们反对“感恩教育”时，我们究竟在反对什么？</title>
-      <link>https://bright.github.io/post/blog20200311/</link>
+      <link>https://ibrights.github.io/post/blog20200311/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200311/</guid>
+      <guid>https://ibrights.github.io/post/blog20200311/</guid>
       <description>2020年3月7日，《长江日报》刊载了一篇题为“在全市开展感恩教育，形成强大正能量”的文章，披露了现任武汉市委书记王忠林在武汉市新冠肺炎疫情防控指挥部视频座谈会上关于对广大市民及党员干部开展以“听党话、跟党走、形成强大正能量”为主题的感恩教育的指示。该文一经刊出，立即引来舆论哗然。人们纷纷指责武汉政府在疫情尚未得到有效控制的情况下将宝贵精力投入到如此“细枝末</description>
     </item>
     
     <item>
       <title>利用 Hugo 和 Github Pages 搭建自己的个人博客</title>
-      <link>https://bright.github.io/post/blog20200310/</link>
+      <link>https://ibrights.github.io/post/blog20200310/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200310/</guid>
+      <guid>https://ibrights.github.io/post/blog20200310/</guid>
       <description>如你所见，此博客是一个完全静态的 HTML 站点。相比于 PHP 编写的动态站点，静态站点不仅访问速度更快，而且部署门槛低。一个完全不会编程的新手，只要花点时间掌握一些工具的用法，也能轻松建立属于自己的站点。 本站由 Hugo 渲染而成。它的使用方式非常简单，想要自学的朋友可以阅读 Hugo 的官方文档。与其他博客系统一样，Hugo 也拥有着众多简介美观的主题，本站所使用的皮肤是 maupassant</description>
     </item>
     
     <item>
       <title>这个世界不需要英雄</title>
-      <link>https://bright.github.io/post/blog20200121/</link>
+      <link>https://ibrights.github.io/post/blog20200121/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20200121/</guid>
+      <guid>https://ibrights.github.io/post/blog20200121/</guid>
       <description>2019年12月底，谷歌照例公布了去年的年度词汇——“英雄（Hero）”.这或许和过去一年上映的众多超级英雄电影不无关系，但在这个充满混乱与焦虑的时代，呼唤英雄也确实会成为人们的选择之一。因为历史毕竟只是过去事件的缩略记录，难免会给人一种“英雄史观”的错觉，所以越是善于“以史为鉴”的民族，越会在自身无法应付的历史关口前，翘首期盼英雄的出现。就像拿破仑之于法国</description>
     </item>
     
     <item>
       <title>雪花的“正义性”与“屋子里的大象”</title>
-      <link>https://bright.github.io/post/blog20191209/</link>
+      <link>https://ibrights.github.io/post/blog20191209/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20191209/</guid>
+      <guid>https://ibrights.github.io/post/blog20191209/</guid>
       <description>近年来，随着勒庞所著《乌合之众》在阅读界的流行，中文社会掀起了一场污名化“大众”的浪潮。人们似乎从勒庞那缺乏逻辑连续性和实证支撑的“论述”中，找到了“管制”大众舆论的合法性。本着“带着论点找论据”的精神，一系列大众舆论的“恶行”被公之于众。于是，“舆论吃人”的论点开始被“舆论”本身所接受，形成了一派“自废武功”的奇特景致。 事实上，舆论并非全无“恶行”，雪花也</description>
     </item>
     
     <item>
       <title>革命与改革：李侃如对中国的洞见与误读</title>
-      <link>https://bright.github.io/post/blog20191202/</link>
+      <link>https://ibrights.github.io/post/blog20191202/</link>
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20191202/</guid>
+      <guid>https://ibrights.github.io/post/blog20191202/</guid>
       <description>与经济快速增长所带来的新的民族自豪感相伴而生的，是所谓“中国特殊论”的兴起。它一边强调中国与其他国家的差异，为现行体制穿上“符合国情”的合法外衣，从而在基础理论上排斥结构性改革；一边夸大中国文化对于外国人的“不可理解性”，拒绝接受中国文化圈以外的人对自身的解剖和批评。无论如何，中国特殊论都构成了李侃如所言“排外主义”的支柱之一，为部分保守人士的“闭门造车”大</description>
     </item>
     
     <item>
       <title>专制与革命：历史周期律中的奥威尔精神</title>
-      <link>https://bright.github.io/post/blog20191023/</link>
+      <link>https://ibrights.github.io/post/blog20191023/</link>
       <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://bright.github.io/post/blog20191023/</guid>
+      <guid>https://ibrights.github.io/post/blog20191023/</guid>
       <description>某种程度上，奥威尔是我的政治启蒙者。当我还在读初中的时候，历史老师曾在一个慵懒的午后，送给我一本薄薄的小册子，作为考试成绩进步的奖励。这本书就是《动物农场》。那天晚上回到家后，我一口气读完了整本书。尽管当时的我并不了解苏联历史，也不知道斯大林和托洛茨基的内斗，但这则短小的寓言仍然使我感到了深深的震撼。自那以后，我开始阅读启蒙运动以来的一系列哲学与伦理学著作，</description>
     </item>
     
