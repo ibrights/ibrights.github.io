@@ -6,10 +6,19 @@
     <description>Recent content in 科技分享 on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ibrights.github.io/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>桥接模式下 Openwrt 软路由直接访问光猫后台</title>
+      <link>https://ibrights.github.io/post/blog20210505/</link>
+      <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ibrights.github.io/post/blog20210505/</guid>
+      <description>光猫开启桥接模式后，软路由作为默认网关进行拨号与 NAT，导致客户端设备无法获取与光猫相同网段的 IP 地址，进而也就无法登陆光猫的后台管理界面。虽然在日常使用的过程中，光猫的配置几乎是一次性的，其后台管理界面的使用频率很低，但是每次登陆光猫后台都要通过有线或无线（若有）的方式将设备直接与光猫相连也着实麻烦。因此需要通过一些简单的配置，实现桥接模式下，连接软路由的同</description>
+    </item>
     
     <item>
       <title>利用 Parsec 实现远程游戏串流</title>
