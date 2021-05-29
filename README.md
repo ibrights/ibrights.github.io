@@ -10,7 +10,7 @@
 
 希望未来能利用空闲时间写点法律科普文，并做成音频以供传播，系列名称暂定为《议正言辞（Bright's Talk）》。
 
-![](/images/logo_righteous_talk.jpg)
+![](/images/logo_brights_talk.jpg)
 
 # 关于本博客
 
