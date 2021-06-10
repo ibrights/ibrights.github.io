@@ -6,10 +6,19 @@
     <description>Recent content on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Tue, 08 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ibrights.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>教育分流于阶层固化——简评最近的教育改革</title>
+      <link>https://ibrights.github.io/post/blog20210610/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ibrights.github.io/post/blog20210610/</guid>
+      <description>与本文有关的新闻报道 新华网：习近平对职业教育工作作出重要指示 2021-04-13 12:29:40 | 来源： 新华网 习近平近日对职业教育工作作出重要指示强调，在全面建设社会主义现代化国家新征程中，职业教育前途广阔、大有可为。要坚持党的领导，坚持正确办学方向，坚持立德树人，优化职业教育类型定位，深化产教融合、校企合作，深入推进育人方式、办学模式、管理体制、保障机制改革，稳步发展职业本科教育，建设一</description>
+    </item>
     
     <item>
       <title>实测苹果专用转接代理可用于翻墙，但中国大陆地区无法使用</title>
@@ -17,7 +26,10 @@
       <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ibrights.github.io/post/blog20210608/</guid>
-      <description>昨晚熬夜看了今年的 Apple WWDC 直播。虽然今年没有发布任何硬件设备，但 iOS 15 和 macOS Monterey 的一些新的功能特性确实解决了我的好几个痛点。 一直以来，隐私保护都是苹果公司的宣传重点之一，以致于其越发严苛的隐私政策已经十足地损害了像 Facebook 和 Google 这种以收集用户数据为主要盈利方式的互联网巨头的利益。iOS 14.5 版本新增的“允许 App 请求跟踪”功能，就曾遭到 Facebook 的强烈反对。 针对用户隐私保护，苹果在今年的 WWDC 上</description>
+      <description>&lt;p&gt;昨晚熬夜看了今年的 Apple &lt;a href=&#34;https://developer.apple.com/wwdc21/&#34; target=&#34;_blank&#34;&gt;WWDC&lt;/a&gt; 直播。虽然今年没有发布任何硬件设备，但 iOS 15 和 macOS Monterey 的一些新的功能特性确实解决了我的好几个痛点。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20210608/wwdc2021.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;一直以来，隐私保护都是苹果公司的宣传重点之一，以致于其越发严苛的隐私政策已经十足地损害了像 Facebook 和 Google 这种以收集用户数据为主要盈利方式的互联网巨头的利益。iOS 14.5 版本新增的“允许 App 请求跟踪”功能，就曾&lt;a href=&#34;https://cn.wsj.com/articles/%e6%97%a0%e8%a7%86facebook%e5%8f%8d%e5%af%b9%ef%bc%8c%e8%8b%b9%e6%9e%9c%e5%85%ac%e5%8f%b8%e5%b0%86%e6%8e%a8%e5%87%ba%e6%96%b0%e7%9a%84%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%8e%aa%e6%96%bd-11611818710&#34; target=&#34;_blank&#34;&gt;遭到 Facebook 的强烈反对&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
