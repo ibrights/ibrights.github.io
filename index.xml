@@ -6,10 +6,19 @@
     <description>Recent content on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Thu, 27 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ibrights.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实测苹果专用转接代理可用于翻墙，但中国大陆地区无法使用</title>
+      <link>https://ibrights.github.io/post/blog20210608/</link>
+      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ibrights.github.io/post/blog20210608/</guid>
+      <description>昨晚熬夜看了今年的 Apple WWDC 直播。虽然今年没有发布任何硬件设备，但 iOS 15 和 macOS Monterey 的一些新的功能特性确实解决了我的好几个痛点。 一直以来，隐私保护都是苹果公司的宣传重点之一，以致于其越发严苛的隐私政策已经十足地损害了像 Facebook 和 Google 这种以收集用户数据为主要盈利方式的互联网巨头的利益。iOS 14.5 版本新增的“允许 App 请求跟踪”功能，就曾遭到 Facebook 的强烈反对。 针对用户隐私保护，苹果在今年的 WWDC 上</description>
+    </item>
     
     <item>
       <title>利用 Favicon 为 Hugo 静态站点添加图标</title>
