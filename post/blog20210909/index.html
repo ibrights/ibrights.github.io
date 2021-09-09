@@ -140,13 +140,10 @@
 <p>对于系统是否满足上述第一个条件，可以通过以下方式进行检验：首先用 ssh 工具连接到服务器，确保登陆 ssh 的账户拥有系统管理权限，再输入以下命令：</p>
 <pre><code>ls /dev/dri
 </code></pre>
-<p>如果返回的结果为：</p>
-<pre><code>card0 renderD128
-</code></pre>
-<p>那么恭喜，核显驱动运行正常，硬件系统满足视频解码的基本条件。接下来便是将 renderD128 这个核显驱动直通给 Docker 容器的方法。</p>
+<p>如果返回的结果为 <code>card0 renderD128</code> ，那么恭喜，核显驱动运行正常，硬件系统满足视频解码的基本条件。接下来便是将 renderD128 这个核显驱动直通给 Docker 容器的方法。</p>
 <h2 id="为什么必须用-portainer">为什么必须用 Portainer?</h2>
 <p>无论是群辉、威联通还是 Unraid，市场上绝大多数 NAS 系统都提供了图形化的 Docker 容器管理工具。但无论上述哪一个，都不支持核显驱动的直通功能。群辉的 Docker 套件无法编辑容器的系统资源参数，威联通的 Container Station 干脆无法编辑已经创建好的容器。</p>
-<p><strong>这里所说的“直通”，其实是将 /dev/dri/renderD128 这个驱动文件映射到 Docker 容器的相同位置</strong>。这一点利用命令行可以非常轻松地实现，即在 Jellyfin 容器的拉取命令中加入下列参数：</p>
+<p><strong>这里所说的“直通”，其实是将 <code>/dev/dri/renderD128</code> 这个驱动文件映射到 Docker 容器的相同位置</strong>。这一点利用命令行可以非常轻松地实现，即在 Jellyfin 容器的拉取命令中加入下列参数：</p>
 <pre><code>--device=/dev/dri/renderD128 \
 </code></pre>
 <p>因此，要快速拉取并创建一个开启硬件解码的 Jellyfin 容器，只要在 NAS 的命令行界面输入以下命令即可：</p>
@@ -163,7 +160,7 @@ jellyfin/jellyfin
 <p>但对许多轻度用户来说，命令行不仅不便理解，也断绝了后续对容器进行修改和自定义的空间。因此对于绝大多数日常用户来说，我个人强烈推荐使用 Portainer。它本身也是一个运行在 Docker 容器里的程序，但它拥有强大的 Docker 管理功能，是目前市面上功能最完善的网页端 Docker 容器管理界面。</p>
 <p>因此，对于那些既不想用命令行，又希望对 Docker 有较为全面管控的用户来说，Portainer 几乎是唯一的选择。通过 Portainer，即使是初学者也能轻松为 Jellyfin 开启硬件解码。</p>
 <h2 id="portainer-的安装与使用">Portainer 的安装与使用</h2>
-<p>由于 Portainer 需要调用 /var/run/docker.sock 这个文件以实现对 Docker 的直接管理，因此 Portainer 也无法通过群辉或威联通自带的 Docker 管理界面进行安装，因为上述管理界面均不支持针对单个文件的映射。但由于 Portainer 需要配置的参数较少，且容器创建完成后不需要频繁修改，因此普通用户可以直接复制一以下命令进行安装。</p>
+<p>由于 Portainer 需要调用 <code>/var/run/docker.sock</code> 这个文件以实现对 Docker 的直接管理，因此 Portainer 也无法通过群辉或威联通自带的 Docker 管理界面进行安装，因为上述管理界面均不支持针对单个文件的映射。但由于 Portainer 需要配置的参数较少，且容器创建完成后不需要频繁修改，因此普通用户可以直接复制一以下命令进行安装。</p>
 <pre><code>sudo docker run -d --name prtainer \
 -v /var/run/docker.sock:/var/run/docker.sock \ #关键
 -p 9000:9000 \ #web界面访问端口
