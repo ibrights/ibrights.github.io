@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.74.2" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+<link rel="manifest" href="/icon/site.webmanifest">
+<link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+<title>利用 Portainer 实现 Docker 端 Jellyfin 硬件解码 - Bright&#39;s Blog</title>
+
+
+<meta name="author" content="谷月" />
+
+
+<meta name="description" content="日常技术记录" />
+
+
+<meta name="keywords" content="科技分享" />
+
+<meta property="og:title" content="利用 Portainer 实现 Docker 端 Jellyfin 硬件解码" />
+<meta property="og:description" content="日常技术记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ibrights.github.io/post/blog20210909/" />
+<meta property="og:image" content="https://ibrights.github.io/images/logo.png"/>
+<meta property="article:published_time" content="2021-09-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-09T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ibrights.github.io/images/logo.png"/>
+
+<meta name="twitter:title" content="利用 Portainer 实现 Docker 端 Jellyfin 硬件解码"/>
+<meta name="twitter:description" content="日常技术记录"/>
+
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+<link rel="stylesheet" href="/assets/css/fuji.min.css" />
+
+
+<script async type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.esm.js"></script>
+<script async nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.js"></script>
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-173973117-1');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173973117-1"></script>
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="https://ibrights.github.io">Bright&#39;s Blog</a>
+            
+            <span class="title-sub">知识分享与微小叙事。</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="https://ibrights.github.io/post/blog20210909/">利用 Portainer 实现 Docker 端 Jellyfin 硬件解码</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><ion-icon name="today"></ion-icon>&nbsp;2021-09-09</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;1345 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+    </div>
+    
+    
+    <div class="post-content markdown-body">
+        <h2 id="原理及环境检测">原理及环境检测</h2>
+<p>随着版本的不断迭代，Jellyfin 已经逐渐超过 Plex  和自家兄弟 Emby，成为用户数量最所的个人媒体管理方案，这不仅因为它的所有功能均为免费，更是因为它的源代码完全开源，具有极高的维护与拓展空间。</p>
+<p><img class="img-zoomable" src="/images/blog20210909/jellyfin.png" alt="" />
+</p>
+<p>不论用于运行 Jellyfin 的具体是哪款操作系统，只要该系统是基于 Linux，我们就可以通过 Docker 容器来实现极为简单且方式一致的部署。<strong>但相比于原生套件，Docker 有一个显而易见的缺点，即无法直接调用各类系统资源</strong>，核显驱动就是其中之一。</p>
+<p>要让 Jellyfin 的 Docker 容器实时调用核显驱动（也就是人们常说的开启硬解），要满足两个条件：</p>
+<ol>
+<li>拥有支持视频解码的核心显卡，且核心显卡的<strong>驱动程序</strong>运行正常；</li>
+<li>将核显驱动<strong>直通</strong>给 Docker 容器，并赋予 Docker 容器调用该驱动的权限。</li>
+</ol>
+<p>对于系统是否满足上述第一个条件，可以通过以下方式进行检验：首先用 ssh 工具连接到服务器，确保登陆 ssh 的账户拥有系统管理权限，再输入以下命令：</p>
+<pre><code>ls /dev/dri
+</code></pre>
+<p>如果返回的结果为：</p>
+<pre><code>card0 renderD128
+</code></pre>
+<p>那么恭喜，核显驱动运行正常，硬件系统满足视频解码的基本条件。接下来便是将 renderD128 这个核显驱动直通给 Docker 容器的方法。</p>
+<h2 id="为什么必须用-portainer">为什么必须用 Portainer?</h2>
+<p>无论是群辉、威联通还是 Unraid，市场上绝大多数 NAS 系统都提供了图形化的 Docker 容器管理工具。但无论上述哪一个，都不支持核显驱动的直通功能。群辉的 Docker 套件无法编辑容器的系统资源参数，威联通的 Container Station 干脆无法编辑已经创建好的容器。</p>
+<p><strong>这里所说的“直通”，其实是将 /dev/dri/renderD128 这个驱动文件映射到 Docker 容器的相同位置</strong>。这一点利用命令行可以非常轻松地实现，即在 Jellyfin 容器的拉取命令中加入下列参数：</p>
+<pre><code>--device=/dev/dri/renderD128 \
+</code></pre>
+<p>因此，要快速拉取并创建一个开启硬件解码的 Jellyfin 容器，只要在 NAS 的命令行界面输入以下命令即可：</p>
+<pre><code>sudo docker run -d --name jellyfin \
+-v /share/Container/Jellyfin/config:/config \ #冒号左边为存放配置文件的目录
+-v /share/Container/Jellyfin/cache:/cache \ #冒号左边为存放媒体缓存的目录
+-v /share/Media/:/media \ #冒号左边为存放电影文件的目录
+-p 8096:8096 \ #web界面访问端口（http）
+-p 8920:8920 \ #web界面访问端口（https）
+--device=/dev/dri/renderD128 \ #映射核显驱动
+--restart=always \ #重启策略
+jellyfin/jellyfin
+</code></pre>
+<p>但对许多轻度用户来说，命令行不仅不便理解，也断绝了后续对容器进行修改和自定义的空间。因此对于绝大多数日常用户来说，我个人强烈推荐使用 Portainer。它本身也是一个运行在 Docker 容器里的程序，但它拥有强大的 Docker 管理功能，是目前市面上功能最完善的网页端 Docker 容器管理界面。</p>
+<p>因此，对于那些既不想用命令行，又希望对 Docker 有较为全面管控的用户来说，Portainer 几乎是唯一的选择。通过 Portainer，即使是初学者也能轻松为 Jellyfin 开启硬件解码。</p>
+<h2 id="portainer-的安装与使用">Portainer 的安装与使用</h2>
+<p>由于 Portainer 需要调用 /var/run/docker.sock 这个文件以实现对 Docker 的直接管理，因此 Portainer 也无法通过群辉或威联通自带的 Docker 管理界面进行安装，因为上述管理界面均不支持针对单个文件的映射。但由于 Portainer 需要配置的参数较少，且容器创建完成后不需要频繁修改，因此普通用户可以直接复制一以下命令进行安装。</p>
+<pre><code>sudo docker run -d --name prtainer \
+-v /var/run/docker.sock:/var/run/docker.sock \ #关键
+-p 9000:9000 \ #web界面访问端口
+--restart=always \ #重启策略
+portainer/portainer
+</code></pre>
+<p>容器创建完成后，即可通过 IP:端口的方式访问 Portainer 的管理界面，Portainer 的默认访问端口是 9000。初次登陆需要设置管理员账号和密码。</p>
+<p><img class="img-zoomable" src="/images/blog20210909/portainer-1.png" alt="" />
+</p>
+<p>因为是单机使用，所以连接模式选择“local”，然后点击“Connect”即可连接到服务器上的docker。</p>
+<p><img class="img-zoomable" src="/images/blog20210909/portainer-2.png" alt="" />
+</p>
+<p>配置完成后，再次点击 local，选择左侧的 Container 便可使用 Portainer 对系统上现有的所有 Docker 容器进行管理了。</p>
+<p><img class="img-zoomable" src="/images/blog20210909/portainer-3.png" alt="" />
+</p>
+<h2 id="安装-jellyfin-并直通核显驱动开启硬解">安装 Jellyfin 并直通核显驱动（开启硬解）</h2>
+    </div>
+</article>
+
+
+<div class="license markdown-body">
+    <blockquote>
+        <p>除特殊注明部分，本站内容采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a> 进行许可。</p>
+    </blockquote>
+</div>
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA/">时事评论</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/">科技分享</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/ibrights/" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="mailto:brights2021@163.com" target="_blank"><span>Email</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-toggle-mode">
+        <ion-icon name="contrast"></ion-icon>
+    </div>
+    <div class="btn-scroll-top">
+        <ion-icon name="chevron-up"></ion-icon>
+    </div>
+</div>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            <span>&copy; 2021 <a href="https://ibrights.github.io">谷月</a> |
+                基于 <a href="https://github.com/amzrk2/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
+                   target="_blank">Hugo</a> 构建</span>
+        </div>
+    </div>
+</footer>
+    
+<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

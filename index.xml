@@ -6,18 +6,22 @@
     <description>Recent content on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ibrights.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>教育分流于阶层固化——简评最近的教育改革</title>
-      <link>https://ibrights.github.io/post/blog20210610/</link>
-      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <title>利用 Portainer 实现 Docker 端 Jellyfin 硬件解码</title>
+      <link>https://ibrights.github.io/post/blog20210909/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ibrights.github.io/post/blog20210610/</guid>
-      <description>与本文有关的新闻报道 新华网：习近平对职业教育工作作出重要指示 2021-04-13 12:29:40 | 来源： 新华网 习近平近日对职业教育工作作出重要指示强调，在全面建设社会主义现代化国家新征程中，职业教育前途广阔、大有可为。要坚持党的领导，坚持正确办学方向，坚持立德树人，优化职业教育类型定位，深化产教融合、校企合作，深入推进育人方式、办学模式、管理体制、保障机制改革，稳步发展职业本科教育，建设一</description>
+      <guid>https://ibrights.github.io/post/blog20210909/</guid>
+      <description>&lt;h2 id=&#34;原理及环境检测&#34;&gt;原理及环境检测&lt;/h2&gt;
+&lt;p&gt;随着版本的不断迭代，Jellyfin 已经逐渐超过 Plex  和自家兄弟 Emby，成为用户数量最所的个人媒体管理方案，这不仅因为它的所有功能均为免费，更是因为它的源代码完全开源，具有极高的维护与拓展空间。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20210909/jellyfin.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;不论用于运行 Jellyfin 的具体是哪款操作系统，只要该系统是基于 Linux，我们就可以通过 Docker 容器来实现极为简单且方式一致的部署。&lt;strong&gt;但相比于原生套件，Docker 有一个显而易见的缺点，即无法直接调用各类系统资源&lt;/strong&gt;，核显驱动就是其中之一。&lt;/p&gt;</description>
     </item>
     
     <item>
