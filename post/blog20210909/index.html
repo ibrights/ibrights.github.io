@@ -128,9 +128,9 @@
     
     <div class="post-content markdown-body">
         <h2 id="原理及环境检测">原理及环境检测</h2>
-<p>随着版本的不断迭代，<a href="https://jellyfin.org" target="_blank">Jellyfin</a> 已经逐渐超过 <a href="https://www.plex.tv" target="_blank">Plex</a>  和自家兄弟 <a href="https://emby.media" target="_blank">Emby</a>，成为用户数量最所的个人媒体管理方案，这不仅因为它的所有功能均为免费，更是因为它的源代码完全开源，具有极高的维护与拓展空间。</p>
 <p><img class="img-zoomable" src="/images/blog20210909/jellyfin.png" alt="" />
 </p>
+<p>随着版本的不断迭代，<a href="https://jellyfin.org" target="_blank">Jellyfin</a> 已经逐渐超过 <a href="https://www.plex.tv" target="_blank">Plex</a>  和自家兄弟 <a href="https://emby.media" target="_blank">Emby</a>，成为用户数量最所的个人媒体管理方案，这不仅因为它的所有功能均为免费，更是因为它的源代码完全开源，具有极高的维护与拓展空间。</p>
 <p>不论用于运行 Jellyfin 的具体是哪款操作系统，只要该系统是基于 Linux，我们就可以通过 Docker 容器来实现极为简单且方式一致的部署。<strong>但相比于原生套件，Docker 有一个显而易见的缺点，即无法直接调用各类系统资源</strong>，核显驱动就是其中之一。</p>
 <p>要让 Jellyfin 的 Docker 容器实时调用核显驱动（也就是人们常说的开启硬解），要满足两个条件：</p>
 <ol>
