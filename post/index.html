@@ -121,11 +121,11 @@
         <a href="https://ibrights.github.io/post/blog20210909/">利用 Portainer 实现 Docker 端 Jellyfin 硬件解码</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2021-09-09</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;1365 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+        <span><ion-icon name="today"></ion-icon>&nbsp;2021-09-09</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;2047 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
     </div>
     <div class="post-item post-summary markdown-body">
         <h2 id="原理及环境检测">原理及环境检测</h2>
-<p>随着版本的不断迭代，Jellyfin 已经逐渐超过 Plex  和自家兄弟 Emby，成为用户数量最所的个人媒体管理方案，这不仅因为它的所有功能均为免费，更是因为它的源代码完全开源，具有极高的维护与拓展空间。</p>
+<p>随着版本的不断迭代，<a href="https://jellyfin.org" target="_blank">Jellyfin</a> 已经逐渐超过 <a href="https://www.plex.tv" target="_blank">Plex</a>  和自家兄弟 <a href="https://emby.media" target="_blank">Emby</a>，成为用户数量最所的个人媒体管理方案，这不仅因为它的所有功能均为免费，更是因为它的源代码完全开源，具有极高的维护与拓展空间。</p>
 <p><img class="img-zoomable" src="/images/blog20210909/jellyfin.png" alt="" />
 </p>
 <p>不论用于运行 Jellyfin 的具体是哪款操作系统，只要该系统是基于 Linux，我们就可以通过 Docker 容器来实现极为简单且方式一致的部署。<strong>但相比于原生套件，Docker 有一个显而易见的缺点，即无法直接调用各类系统资源</strong>，核显驱动就是其中之一。</p>
