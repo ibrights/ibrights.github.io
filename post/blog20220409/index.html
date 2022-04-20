@@ -135,7 +135,7 @@
 <h2 id="通过-docker-部署-ha-容器">通过 Docker 部署 HA 容器</h2>
 <p>正如前文所述，HA 支持多种操作系统，但如果我们打算将其作为 7x24 小时待机的智能家庭中枢，那么最好的选择就是 Linux 系统，因为它可以运行在诸如<a href="https://www.raspberrypi.org/" target="_blank">树莓派</a>这类低功耗的设备上，随时准备着为我们提供服务。</p>
 <p>提到 Linux，我们就不得不提 Docker，它是一种兼容性极高的容器系统，可以适应几乎所有 Linux 环境，做到即装即用。今天，我们将着重介绍通过 Docker 容器部署 HA 的方法。</p>
-<p>我的<a href="https://ibrights.github.io/post/blog20210909/" target="_blank">这篇文章</a>详细介绍了 <a href="https://hub.docker.com/r/portainer/portainer-ce" target="_blank">Portainer</a> 这个非常好用的 Docker 管理容器，由于每位读者的系统环境不尽相同，因此本博客往后介绍的所有 Docker 容器安装，不再拘泥于群晖、为联通或者 Unraid，而是统一通过 Portainer 进行。</p>
+<p>我的<a href="https://ibrights.github.io/post/blog20210909/" target="_blank">这篇文章</a>详细介绍了 <a href="https://hub.docker.com/r/portainer/portainer-ce" target="_blank">Portainer</a> 这个非常好用的 Docker 管理容器，<strong>由于每位读者的系统环境不尽相同，因此本博客往后介绍的所有 Docker 容器安装，不再拘泥于群晖、威联通或者 Unraid，而是统一通过 Portainer 进行</strong>。</p>
 <p>Portainer 本身的安装可以参考上面提到的文章，本文不再赘述。要安装 HA，我们首先需要登录 Portainer 后台，然后进入本地终端界面，也就是 Local，接着点击左侧的 Containers，进入本地容器管理界面。</p>
 <p><img class="img-zoomable" src="/images/blog20220409/portainer01.png" alt="" />
 </p>
@@ -149,8 +149,8 @@
 <p><img class="img-zoomable" src="/images/blog20220409/portainer04.png" alt="" />
 </p>
 <p>剩下的高级设置就比较简单了，Network 设置成 host，Restart policy 设置成 Always 即可。最后点击 Deploy the container，等待一段时间，如果网络连接通畅的话，即可完成 HA 容器的部署。</p>
+<p>HA 的后台默认端口是 8123，因此只要我们在局域网中访问 HA 运行设备的 <code>ip地址:8123</code> 即可登录 HA 的网页端。初次打开 HA 网页端需要进行一些基本的初始化配置，例如用户名、密码这些，此处不再赘述。需要注意的是，<strong>HA 管理员账户的密码无法找回，如果我们忘记此处设置的密码，后面只能通过重装容器的方式解决</strong>。</p>
 <h2 id="安装-hacs-集成">安装 HACS 集成</h2>
-<p>HA 的后台默认端口是 8123，因此只要我们在局域网中访问 HA 运行设备的 <code>ip地址:8123</code> 即可登录 HA 的网页端。初次打开 HA 网页端需要进行一些基本的初始化配置，例如用户名、密码这些，此处不再赘述。需要注意的是，HA 管理员账户的密码无法找回，如果我们忘记此处设置的密码，后面只能通过重装容器的方式解决。</p>
 <p><a href="https://hacs.xyz" target="_blank">HACS</a> 的全称是 Home Assistant Community Store，是一个 HA 社区商店，里面提供了各种外观主题，以及第三方集成的下载，使用起来非常方面，建议所有 HA 用户安装。</p>
 <p><img class="img-zoomable" src="/images/blog20220409/hacs.png" alt="" />
 </p>

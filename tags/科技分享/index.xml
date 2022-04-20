@@ -20,8 +20,7 @@
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20220409/HA.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
-&lt;p&gt;随着智能家居的日益普及，各大互联网巨头纷纷进场，导致智能家居的平台和品牌越来越多，且各个平台和品牌间的产品无法互通。例如，你无法用米家的智能开关来控制 homekit 的智能灯，除非你的产品支持双平台，但目前同时支持两个以上平台的智能家居少之又少。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.home-assistant.io/&#34; target=&#34;_blank&#34;&gt;Home Assistant&lt;/a&gt;（以下简称 HA）很好地解决了智能家居平台不互通的问题，它是一个开源的智能家居集成平台，可将各个常见平台的产品接入，并通过网页、&lt;a href=&#34;https://apps.apple.com/us/app/home-assistant/id1099568401&#34; target=&#34;_blank&#34;&gt;手机app&lt;/a&gt;等多种客户端统一操控，实现真正的「万物互联」。并且最重要的是，这么好用的工具不仅支持 Windows、MacOS、Linux 等多种操作系统，其本身也是开源免费的，并且其极高的扩展性也为爱折腾的数码爱好者提供了全新的研究对象。&lt;/p&gt;</description>
+&lt;p&gt;随着智能家居的日益普及，各大互联网巨头纷纷进场，导致智能家居的平台和品牌越来越多，且各个平台和品牌间的产品无法互通。例如，你无法用米家的智能开关来控制 homekit 的智能灯，除非你的产品支持双平台，但目前同时支持两个以上平台的智能家居少之又少。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -33,8 +32,7 @@
       <description>&lt;h2 id=&#34;原理及环境检测&#34;&gt;原理及环境检测&lt;/h2&gt;
 &lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20210909/jellyfin.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
-&lt;p&gt;随着版本的不断迭代，&lt;a href=&#34;https://jellyfin.org&#34; target=&#34;_blank&#34;&gt;Jellyfin&lt;/a&gt; 已经逐渐超过 &lt;a href=&#34;https://www.plex.tv&#34; target=&#34;_blank&#34;&gt;Plex&lt;/a&gt;  和自家兄弟 &lt;a href=&#34;https://emby.media&#34; target=&#34;_blank&#34;&gt;Emby&lt;/a&gt;，成为用户数量最所的个人媒体管理方案，这不仅因为它的所有功能均为免费，更是因为它的源代码完全开源，具有极高的维护与拓展空间。&lt;/p&gt;
-&lt;p&gt;不论用于运行 Jellyfin 的具体是哪款操作系统，只要该系统是基于 Linux，我们就可以通过 Docker 容器来实现极为简单且方式一致的部署。&lt;strong&gt;但相比于原生套件，Docker 有一个显而易见的缺点，即无法直接调用各类系统资源&lt;/strong&gt;，核显驱动就是其中之一。&lt;/p&gt;</description>
+&lt;p&gt;随着版本的不断迭代，&lt;a href=&#34;https://jellyfin.org&#34; target=&#34;_blank&#34;&gt;Jellyfin&lt;/a&gt; 已经逐渐超过 &lt;a href=&#34;https://www.plex.tv&#34; target=&#34;_blank&#34;&gt;Plex&lt;/a&gt;  和自家兄弟 &lt;a href=&#34;https://emby.media&#34; target=&#34;_blank&#34;&gt;Emby&lt;/a&gt;，成为用户数量最所的个人媒体管理方案，这不仅因为它的所有功能均为免费，更是因为它的源代码完全开源，具有极高的维护与拓展空间。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,8 +43,7 @@
       <guid>https://ibrights.github.io/post/blog20210608/</guid>
       <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20210608/wwdc2021.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
-&lt;p&gt;昨晚熬夜看了今年的 Apple &lt;a href=&#34;https://developer.apple.com/wwdc21/&#34; target=&#34;_blank&#34;&gt;WWDC&lt;/a&gt; 直播。虽然今年没有发布任何硬件设备，但 iOS 15 和 macOS Monterey 的一些新的功能特性确实解决了我的好几个痛点。&lt;/p&gt;
-&lt;p&gt;一直以来，隐私保护都是苹果公司的宣传重点之一，以致于其越发严苛的隐私政策已经十足地损害了像 Facebook 和 Google 这种以收集用户数据为主要盈利方式的互联网巨头的利益。iOS 14.5 版本新增的“允许 App 请求跟踪”功能，就曾&lt;a href=&#34;https://cn.wsj.com/articles/%e6%97%a0%e8%a7%86facebook%e5%8f%8d%e5%af%b9%ef%bc%8c%e8%8b%b9%e6%9e%9c%e5%85%ac%e5%8f%b8%e5%b0%86%e6%8e%a8%e5%87%ba%e6%96%b0%e7%9a%84%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%8e%aa%e6%96%bd-11611818710&#34; target=&#34;_blank&#34;&gt;遭到 Facebook 的强烈反对&lt;/a&gt;。&lt;/p&gt;</description>
+&lt;p&gt;昨晚熬夜看了今年的 Apple &lt;a href=&#34;https://developer.apple.com/wwdc21/&#34; target=&#34;_blank&#34;&gt;WWDC&lt;/a&gt; 直播。虽然今年没有发布任何硬件设备，但 iOS 15 和 macOS Monterey 的一些新的功能特性确实解决了我的好几个痛点。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -57,8 +54,7 @@
       <guid>https://ibrights.github.io/post/blog20210527/</guid>
       <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20210527/favicon.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
-&lt;p&gt;我们在使用 &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; 生成静态站点时，经常会遇到一些虽不致命，但很不爽的小问题，例如没有自定义站点图标的问题。假如我们跟随了所用主题的默认配置，通常情况下生成的站点要么没有图标，要么直接套用主题自带的图标，这显然无法满足我那强烈的 DIY 欲望。&lt;/p&gt;
-&lt;p&gt;经常访问本博客的读者可能会注意到，我所使用的 Hugo 主题是一个支持自动切换明暗模式的第三方主题——&lt;a href=&#34;https://github.com/dsrkafuu/hugo-theme-fuji&#34; target=&#34;_blank&#34;&gt;AutoFuji&lt;/a&gt;. 今天在阅读这个主题的说明文档时，我发现原来它是支持 &lt;a href=&#34;https://baike.baidu.com/item/favicon&#34; target=&#34;_blank&#34;&gt;Favicon&lt;/a&gt; 图标代码的。于是经过一通简单的操作，我的博客终于有了自己的图标。&lt;/p&gt;</description>
+&lt;p&gt;我们在使用 &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; 生成静态站点时，经常会遇到一些虽不致命，但很不爽的小问题，例如没有自定义站点图标的问题。假如我们跟随了所用主题的默认配置，通常情况下生成的站点要么没有图标，要么直接套用主题自带的图标，这显然无法满足我那强烈的 DIY 欲望。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -98,10 +94,9 @@
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ibrights.github.io/post/blog20210413/</guid>
-      <description>&lt;p&gt;我们日常使用的 Openwrt 软路由系统几乎都集成了 &lt;a href=&#34;https://openwrt.org/docs/guide-user/luci/start&#34; target=&#34;_blank&#34;&gt;Luci 界面&lt;/a&gt;，它不仅可以为用户提供便利的可视化后台管理界面，还在各路大神的贡献下，适配了众多简单易用的图形化 App。&lt;a href=&#34;https://github.com/DavBfr/luci-app-openvpn-server&#34; target=&#34;_blank&#34;&gt;Luci-app-openvpn-server&lt;/a&gt; 就是众多 Luci 应用中最常用的 VPN 服务器之一。&lt;/p&gt;
-&lt;p&gt;简单来说，luci-app-openvpn-server 就是 Openvpn 服务器端的 Luci 界面版本。有了它，你就可以告别难搞的命令行，通过图形化的网页直接配置你的 Openvpn 服务器端。结合各主流平台的 Openvpn 客户端软件，你可以随时随地接入自己家里的局域网，实现内网访问或文件传输等功能。&lt;/p&gt;
-&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20210413/luci-openvpn.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20210413/openvpn.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;我们日常使用的 Openwrt 软路由系统几乎都集成了 &lt;a href=&#34;https://openwrt.org/docs/guide-user/luci/start&#34; target=&#34;_blank&#34;&gt;Luci 界面&lt;/a&gt;，它不仅可以为用户提供便利的可视化后台管理界面，还在各路大神的贡献下，适配了众多简单易用的图形化 App。&lt;a href=&#34;https://github.com/DavBfr/luci-app-openvpn-server&#34; target=&#34;_blank&#34;&gt;Luci-app-openvpn-server&lt;/a&gt; 就是众多 Luci 应用中最常用的 VPN 服务器之一。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -110,7 +105,9 @@
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ibrights.github.io/post/blog20210320/</guid>
-      <description>&lt;p&gt;由于平时需要处理大量结构复杂的内容，并且各内容板块间还存在相互交叉的引用关系，因此长久以来我一直在寻找一款既能满足需求，又简洁易用的内容管理工具。印象笔记或 OneNote 等笔记类服务似乎最为常见，但一来，将所有的私人内容存储在商业公司的服务器上总会让我缺乏安全感；二来这些软件要么不够轻便，要么对重要功能额外收费，因此一直都无法让我十分满意。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20210320/Trilium.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;由于平时需要处理大量结构复杂的内容，并且各内容板块间还存在相互交叉的引用关系，因此长久以来我一直在寻找一款既能满足需求，又简洁易用的内容管理工具。印象笔记或 OneNote 等笔记类服务似乎最为常见，但一来，将所有的私人内容存储在商业公司的服务器上总会让我缺乏安全感；二来这些软件要么不够轻便，要么对重要功能额外收费，因此一直都无法让我十分满意。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -119,9 +116,9 @@
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ibrights.github.io/post/blog20200914/</guid>
-      <description>&lt;p&gt;要在家庭或公司的局域网以外（俗称外网）访问家中或公司内网的设备（例如 &lt;a href=&#34;https://baike.baidu.com/item/NAS&#34; target=&#34;_blank&#34;&gt;NAS&lt;/a&gt;），通常有两种方式。第一种方式是在局域网的路由器上架设一个 VPN 服务器，再将外网的终端设备作为 VPN 客户端接入内网。在这种情况下，&lt;a href=&#34;https://baike.baidu.com/item/VPN&#34; target=&#34;_blank&#34;&gt;VPN（虚拟专有网络）&lt;/a&gt;充当了网线的角色，即接入 VPN 的外网设备，就相当于拉了一根通往内网的网线。因此在 VPN 网络中，即使这根网线是虚拟的，也能实现如同身处局域网内一般的访问体验。&lt;/p&gt;
-&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20200914/vpn.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20200914/vpn.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;要在家庭或公司的局域网以外（俗称外网）访问家中或公司内网的设备（例如 &lt;a href=&#34;https://baike.baidu.com/item/NAS&#34; target=&#34;_blank&#34;&gt;NAS&lt;/a&gt;），通常有两种方式。第一种方式是在局域网的路由器上架设一个 VPN 服务器，再将外网的终端设备作为 VPN 客户端接入内网。在这种情况下，&lt;a href=&#34;https://baike.baidu.com/item/VPN&#34; target=&#34;_blank&#34;&gt;VPN（虚拟专有网络）&lt;/a&gt;充当了网线的角色，即接入 VPN 的外网设备，就相当于拉了一根通往内网的网线。因此在 VPN 网络中，即使这根网线是虚拟的，也能实现如同身处局域网内一般的访问体验。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -130,9 +127,9 @@
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ibrights.github.io/post/blog20200512/</guid>
-      <description>&lt;p&gt;经常阅读电子书并且用过 Kindle 的人应该都体会过整理电子书时的痛苦。尤其是像我这种经常下载电子书文件再导入到 Kindle 上进行阅读的人（或是为了省钱、或是因为 Kindle 商城中没有我们想要阅读的书），对于那些有着各自不同的标题、作者、封面，以及文件格式的纷繁复杂的电子书，缺乏一套行之有效的管理方案，进而充分管理自己的阅读进度与时间。&lt;/p&gt;
-&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20200512/Snipaste_2020-05-12_21-51-38.jpeg&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20200512/Snipaste_2020-05-12_21-51-38.jpeg&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;经常阅读电子书并且用过 Kindle 的人应该都体会过整理电子书时的痛苦。尤其是像我这种经常下载电子书文件再导入到 Kindle 上进行阅读的人（或是为了省钱、或是因为 Kindle 商城中没有我们想要阅读的书），对于那些有着各自不同的标题、作者、封面，以及文件格式的纷繁复杂的电子书，缺乏一套行之有效的管理方案，进而充分管理自己的阅读进度与时间。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -141,7 +138,9 @@
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ibrights.github.io/post/blog20200326/</guid>
-      <description>&lt;p&gt;对包括我在内的相当一部分人来说，记单词几乎已经成为一种刚需。无论是为了应付考试、取得各类等级证书还是单纯提高语言能力，词汇都是我们不得不正面应对的挑战。而在如今这个互联网时代，捧着厚重的词汇书或者词典进行背诵的方式已经被大多数人所抛弃，因为它既枯燥又低效，不仅会消磨我们学习一门语言的热情，还不利于培养语感、付诸实用。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20200326/anki.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;对包括我在内的相当一部分人来说，记单词几乎已经成为一种刚需。无论是为了应付考试、取得各类等级证书还是单纯提高语言能力，词汇都是我们不得不正面应对的挑战。而在如今这个互联网时代，捧着厚重的词汇书或者词典进行背诵的方式已经被大多数人所抛弃，因为它既枯燥又低效，不仅会消磨我们学习一门语言的热情，还不利于培养语感、付诸实用。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -150,10 +149,9 @@
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ibrights.github.io/post/blog20200325/</guid>
-      <description>&lt;p&gt;不得不说，相比于国外而言，中国国内的公共网盘生态好似一潭死水。这其中固然也有厂商不思进取的缘故，但更主要的还是政府对网络信息的严密审查，使得公共网盘服务提供商很难在维持自身生存和提升用户体验之间取得平衡。&lt;/p&gt;
-&lt;p&gt;经过几年前的一阵腥风血雨之后，目前国内叫得上号的公共网盘只剩下&lt;a href=&#34;https://pan.baidu.com/&#34; title=&#34;百度网盘官网&#34; target=&#34;_blank&#34;&gt;百度网盘&lt;/a&gt;、&lt;a href=&#34;https://union.ctfile.com/&#34; title=&#34;域通网盘官网&#34; target=&#34;_blank&#34;&gt;域通网盘&lt;/a&gt;和&lt;a href=&#34;https://www.jianguoyun.com/&#34; title=&#34;坚果云官网&#34; target=&#34;_blank&#34;&gt;坚果云&lt;/a&gt;等。其中最臭名昭著的非百度莫属，其不仅对非会员用户有着苛刻的功能限制（地容量+下载限速），并且身型极其臃肿、拥有很多大多数用户完全用不到的冗余功能。相比之下，坚果云就要好不少，它对免费用户只做月流量方面的限制，除此之外既不限制速度也无冗余内容，可以说非常良心了。&lt;/p&gt;
-&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20200325/jianguoyun.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20200325/icloud.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;相比于国外而言，中国国内的公共网盘生态好似一潭死水。这其中固然也有厂商不思进取的缘故，但更主要的还是政府对网络信息的严密审查，使得公共网盘服务提供商很难在维持自身生存和提升用户体验之间取得平衡。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -162,10 +160,9 @@
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ibrights.github.io/post/blog20200310/</guid>
-      <description>&lt;p&gt;如你所见，此博客是一个完全静态的 HTML 站点。相比于 PHP 编写的动态站点，静态站点不仅访问速度更快，而且部署门槛低。一个完全不会编程的新手，只要花点时间掌握一些工具的用法，也能轻松建立属于自己的站点。&lt;/p&gt;
-&lt;p&gt;本站由 &lt;a href=&#34;https://gohugo.io/&#34; title=&#34;Hugo官网&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; 渲染而成。它的使用方式非常简单，想要自学的朋友可以阅读 Hugo 的&lt;a href=&#34;https://gohugo.io/documentation/&#34; title=&#34;Hugo官方文档&#34; target=&#34;_blank&#34;&gt;官方文档&lt;/a&gt;。与其他博客系统一样，Hugo 也拥有着众多简介美观的&lt;a href=&#34;https://themes.gohugo.io/&#34; title=&#34;Hugo 官网主题页面&#34; target=&#34;_blank&#34;&gt;主题&lt;/a&gt;，本站所使用的皮肤是 &lt;a href=&#34;https://github.com/flysnow-org/maupassant-hugo&#34; title=&#34;Github库&#34; target=&#34;_blank&#34;&gt;maupassant&lt;/a&gt;&lt;strong&gt;，&lt;/strong&gt; 它最初是由 &lt;a href=&#34;https://github.com/pagecho&#34; title=&#34;Github主页&#34; target=&#34;_blank&#34;&gt;cho&lt;/a&gt; 开发于 &lt;a href=&#34;https://typecho.org/&#34; title=&#34;Typecho官网&#34; target=&#34;_blank&#34;&gt;Typecho&lt;/a&gt; 平台的主题，后被移植到众多其他平台，并被加入了许多新功能。&lt;/p&gt;
-&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20200310/hugo.PNG&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20200310/hugo.PNG&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;如你所见，此博客是一个完全静态的 HTML 站点。相比于 PHP 编写的动态站点，静态站点不仅访问速度更快，而且部署门槛低。一个完全不会编程的新手，只要花点时间掌握一些工具的用法，也能轻松建立属于自己的站点。&lt;/p&gt;</description>
     </item>
     
   </channel>
