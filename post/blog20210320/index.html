@@ -33,20 +33,12 @@
 
 <meta name="keywords" content="科技分享" />
 
+
 <meta property="og:title" content="利用 Docker 搭建 Trilium Notes 服务器" />
-<meta property="og:description" content="日常技术记录" />
+<meta name="twitter:title" content="利用 Docker 搭建 Trilium Notes 服务器" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ibrights.github.io/post/blog20210320/" />
-<meta property="og:image" content="https://ibrights.github.io/images/logo.png"/>
-<meta property="article:published_time" content="2021-03-20T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-03-20T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://ibrights.github.io/images/logo.png"/>
-
-<meta name="twitter:title" content="利用 Docker 搭建 Trilium Notes 服务器"/>
-<meta name="twitter:description" content="日常技术记录"/>
-
+<meta property="og:url" content="https://ibrights.github.io/post/blog20210320/" /><meta property="og:description" content="日常技术记录" />
+<meta name="twitter:description" content="日常技术记录" /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2021-03-20T00:00:00+00:00" /><meta property="article:modified_time" content="2021-03-20T00:00:00+00:00" />
 
 
 <style>
@@ -62,11 +54,10 @@
 </style>
 
 
-<link rel="stylesheet" href="/assets/css/fuji.min.css" />
 
 
-<script async type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.esm.js"></script>
-<script async nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://ibrights.github.io/assets/css/fuji.min.css" />
+
 
 
 
@@ -83,9 +74,15 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173973117-1"></script>
 
 
+
+
+
 </head>
 
-<body data-theme="auto">
+<body
+  data-theme="auto"
+  data-theme-auto='false'
+  >
     <script data-cfasync="false">
   
   var fujiThemeData = localStorage.getItem('fuji_data-theme');
@@ -122,31 +119,35 @@
         <a href="https://ibrights.github.io/post/blog20210320/">利用 Docker 搭建 Trilium Notes 服务器</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2021-03-20</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;1322 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-03-20</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1322 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+
     </div>
     
-    
     <div class="post-content markdown-body">
-        <p><img class="img-zoomable" src="/images/blog20210320/Trilium.png" alt="" />
+        <p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210320/Trilium.png" alt="" />
 </p>
 <p>由于平时需要处理大量结构复杂的内容，并且各内容板块间还存在相互交叉的引用关系，因此长久以来我一直在寻找一款既能满足需求，又简洁易用的内容管理工具。印象笔记或 OneNote 等笔记类服务似乎最为常见，但一来，将所有的私人内容存储在商业公司的服务器上总会让我缺乏安全感；二来这些软件要么不够轻便，要么对重要功能额外收费，因此一直都无法让我十分满意。</p>
 <p>两年前，我接触到一款叫做 <a href="https://www.notion.so/" target="_blank">Notion</a> 的跨平台软件，无论是功能还是界面都令我十分满意，但它的价格并不便宜，我毕竟不是靠内容吃饭的职业创作者，无论如何也不愿为一款笔记软件搞月付。另外，Notion 仍然无法实现在牢牢掌控内容数据的同时实现便捷的多端同步，这也是一个不大不小的遗憾。</p>
-<p><img class="img-zoomable" src="/images/blog20210320/Notion.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210320/Notion.png" alt="" />
 </p>
 <p>直到今天，偶然在<a href="https://sspai.com/post/59739" target="_blank">少数派这篇文章</a>的介绍下了解到一个叫 <a href="https://github.com/zadam/trilium" target="_blank">Trilium</a> 的 Github 开源项目，几乎完美地满足我的所有需求。首先，它是一个开源项目，支持自建笔记服务器，可以让我在牢牢掌控笔记控制权的同时实现多端同步；其次，它界面简洁，非常轻量，甚至可以丢掉客户端，完全实现网页端访问；最后，它完全免费，这点非常重要。</p>
 <p>自从买了<a href="https://www.qnap.com/zh-cn/" target="_blank">威联通</a> NAS 后，我越来越倾向于将自己的各种数据保存在 NAS 上，再通过各类开源软件实现多端同步。这样既能保证数据安全和个人隐私，又能方便地管理自己的文件和数据。<strong>用几千元的成本和少许的电费换得对个人数据的完全掌控，我认为是值得的</strong>。因此，在意识到 Trilium 提供开源的服务端软件后，我立刻开始本地服务器的搭建工作。</p>
 <p>Trilium 的官方文档中提供了通过 <a href="https://hub.docker.com/r/zadam/trilium" target="_blank">Docker</a> 安装 Trilium Server 的具体方式。但由于文档为全英文，且只提供了 SSH 命令安装的方式，一些新手阅读起来可能有些困难，因此本文将以图形化的方式简单陈述 Trilium Server 的安装方式。</p>
 <p>首先，在你的 NAS 上安装 Docker 套件（在威联通的 QTS 中叫做 Container Station）并打开它。</p>
-<p><img class="img-zoomable" src="/images/blog20210320/Container-Station.png" alt="Container Station 介绍页面" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210320/Container-Station.png" alt="Container Station 介绍页面" />
 </p>
 <p>进入“创建”，并在搜索框中搜索 Trilium，找到 zadam/trilium，点击右侧的“安装”。</p>
-<p><img class="img-zoomable" src="/images/blog20210320/Docker-Trilium.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210320/Docker-Trilium.png" alt="" />
 </p>
 <p>在弹出的创建窗口中，点选“高级设置”，首先在“网络”选项卡中设置 Trilium 的端口转发，trilium 的默认 web 界面默认端口是 8080，因此 Container 的端口必须写 8080，而映射出的主机端口则可以根据自身需求填写。为了记忆方便，我倾向于内外端口一致的设置，即主机端口同样设置成 8080，但如果你的 NAS 的 8080 端口已被其他程序占用，请填写其他端口。</p>
 <p><img class="img-zoomable" src="/images/blog20210320/Docker-Trilium2.png" alt="" />
 </p>
 <p>接着，在“共享文件夹”选项卡中，将一个共享文件夹挂在到 Trilium 的容器中。容器中的挂载路径必须写 /trilium-data，而本机共享文件夹则可根据自身需求进行选择，注意挂载共享文件夹的权限必须为读取和写入均有。</p>
-<p><img class="img-zoomable" src="/images/blog20210320/Docker-Trilium3.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210320/Docker-Trilium3.png" alt="" />
 </p>
 <p>上述设置完成后，点击“创建”按钮，系统会自动下载镜像文件并根据你的配置安装容器。容器安装完成后，便可通过在浏览器中输入 NAS IP/端口的方式访问 Trilium 的 web 界面。初次使用 Trilium 时要进行一些简单的初始化设置，例如创建用户名和密码等。虽然界面只有英文，但非常简单，这里不做赘述。</p>
 <p>至此，我们便搭建完成了自己的笔记服务器。关于 Trilium 的具体使用方法，可自行摸索或搜索，总体来说，这款工具的使用门槛并不高。我的这篇文章就是全称用 Trilium 撰写的。Trilium 支持 Marddown 语法，因此对我而言几乎没有任何使用门槛。另外，Trilium 的 web 界面支持移动端布局，只要做好 DDNS 和路由器端口映射，便可在任何地方随时随地访问自己的笔记，无论用电脑还是手机。</p>
@@ -189,6 +190,21 @@
         </ul>
     </div>
     
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/ibrights/" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="mailto:brights2021@163.com" target="_blank"><span>Email</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
     <div class="sidebar-item sidebar-tags">
         <h3>标签</h3>
         <div>
@@ -212,6 +228,46 @@
         </div>
     </div>
     
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
     <div class="sidebar-item sidebar-links">
         <h3>链接</h3>
         <ul>
@@ -227,37 +283,61 @@
         </ul>
     </div>
     
-    
-    
-    
-</aside>
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA/">时事评论</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/">科技分享</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+            </span>
+            
         </div>
-        <div class="btn">
-    <div class="btn-toggle-mode">
-        <ion-icon name="contrast"></ion-icon>
     </div>
-    <div class="btn-scroll-top">
-        <ion-icon name="chevron-up"></ion-icon>
-    </div>
-</div>
+    
+    
+    
+    
+  </div>
+</aside>
     </main>
 
     <footer>
     <div class="container-lg clearfix">
         <div class="col-12 footer">
-            <span>&copy; 2022 <a href="https://ibrights.github.io">Bright</a> |
-                基于 <a href="https://github.com/amzrk2/hugo-theme-fuji/"
-                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
-                   target="_blank">Hugo</a> 构建</span>
+            
+            <span>&copy; 2022
+                <a href="https://ibrights.github.io">Bright</a>
+                
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
         </div>
     </div>
 </footer>
+
     
-<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
 
 <script defer src="/assets/js/fuji.min.js"></script>
+
 
 
 </body>

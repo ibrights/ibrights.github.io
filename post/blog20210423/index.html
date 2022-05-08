@@ -33,20 +33,12 @@
 
 <meta name="keywords" content="科技分享" />
 
+
 <meta property="og:title" content="解决蜗牛星际B双安装黑群晖失败“文件已损毁（13）”" />
-<meta property="og:description" content="日常技术记录" />
+<meta name="twitter:title" content="解决蜗牛星际B双安装黑群晖失败“文件已损毁（13）”" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ibrights.github.io/post/blog20210423/" />
-<meta property="og:image" content="https://ibrights.github.io/images/logo.png"/>
-<meta property="article:published_time" content="2021-04-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-04-23T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://ibrights.github.io/images/logo.png"/>
-
-<meta name="twitter:title" content="解决蜗牛星际B双安装黑群晖失败“文件已损毁（13）”"/>
-<meta name="twitter:description" content="日常技术记录"/>
-
+<meta property="og:url" content="https://ibrights.github.io/post/blog20210423/" /><meta property="og:description" content="日常技术记录" />
+<meta name="twitter:description" content="日常技术记录" /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2021-04-23T00:00:00+00:00" /><meta property="article:modified_time" content="2021-04-23T00:00:00+00:00" />
 
 
 <style>
@@ -62,11 +54,10 @@
 </style>
 
 
-<link rel="stylesheet" href="/assets/css/fuji.min.css" />
 
 
-<script async type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.esm.js"></script>
-<script async nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://ibrights.github.io/assets/css/fuji.min.css" />
+
 
 
 
@@ -83,9 +74,15 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173973117-1"></script>
 
 
+
+
+
 </head>
 
-<body data-theme="auto">
+<body
+  data-theme="auto"
+  data-theme-auto='false'
+  >
     <script data-cfasync="false">
   
   var fujiThemeData = localStorage.getItem('fuji_data-theme');
@@ -122,18 +119,22 @@
         <a href="https://ibrights.github.io/post/blog20210423/">解决蜗牛星际B双安装黑群晖失败“文件已损毁（13）”</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2021-04-23</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;734 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-04-23</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;734 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+
     </div>
     
-    
     <div class="post-content markdown-body">
-        <p><img class="img-zoomable" src="/images/blog20210423/error13.png" alt="" />
+        <p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210423/error13.png" alt="" />
 </p>
 <p>去年疫情期间，由于滞留家中实在无聊，我开始折腾软路由和 DIY NAS，而被折腾得最多的莫过于黑<a href="https://www.synology.com/en-us/dsm" target="_blank">群晖</a>系统。为此，我特意买来两台蜗牛星际（B双和C），其中B双用作软路由，C则用于黑群晖。时隔一年，忙于工作的我已不再有闲暇时间折腾黑群晖，而出于对数据安全和便捷性的考虑，我于今年年初购买了一台威联通的 NAS 主机。俗话说得好，黑群晖折腾到头，就会转去白群辉。但奈何威联通的性价比要比群晖高太多，因此我只好无耻地叛变了革命。</p>
 <p>昨天心血来潮，想把放在角落吃灰许久的蜗牛星际B双刷成黑群晖，用作重要数据的冷备工具，平常都会处于关机状态，只有冷备的时候才会开机。由于我的B双之前一直都用作软路由，因此从来都没有刷过黑群晖。但鉴于蜗牛星际的配置都差不多，我简单地以为直接用之前C上现成的黑群晖引导U盘即可直接安装黑群晖系统。然而天真的我还是遇到了困难。</p>
 <p>问题出在新系统安装的过程中，每当进度走到 56% 的时候，都会跳出编号为 13 的错误，提示“系统安装失败，文件可能已经损毁（13）”。为了解决这一问题，我尝试了很多方法，包括但不限于格式化所有硬盘（包括 SSD）以及更换各个版本的官方或非官方 DSM 安装包，但都不奏效，错误 13 依然存在。</p>
 <p>最后，在电报群里高人的指点下，我终于解决了这一问题。其实，新系统安装的过程中之所以会出现错误 13， 是因为机器主板的 BIOS 没设置好。只要给主机插上键盘和显示器，在开机时进入 BIOS 界面（通常是在开机后显示主板厂商 logo 时按键盘上的 DEL 键进入），然后依次进入 <strong>Advanced—Miscellaneous Configuration—OS Selection</strong>，将 Win 7 改为 Win 8.x 即可。</p>
-<p><img class="img-zoomable" src="/images/blog20210423/bios.jpeg" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210423/bios.jpeg" alt="" />
 </p>
 <p>忙活了半天，最后才知道原来只是这么简单的一个问题。为了不让后来的小白们像我一样浪费时间，特此记录一下。本文也谈不上什么教程了。</p>
     </div>
@@ -175,6 +176,21 @@
         </ul>
     </div>
     
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/ibrights/" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="mailto:brights2021@163.com" target="_blank"><span>Email</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
     <div class="sidebar-item sidebar-tags">
         <h3>标签</h3>
         <div>
@@ -198,6 +214,46 @@
         </div>
     </div>
     
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
     <div class="sidebar-item sidebar-links">
         <h3>链接</h3>
         <ul>
@@ -213,37 +269,61 @@
         </ul>
     </div>
     
-    
-    
-    
-</aside>
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA/">时事评论</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/">科技分享</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+            </span>
+            
         </div>
-        <div class="btn">
-    <div class="btn-toggle-mode">
-        <ion-icon name="contrast"></ion-icon>
     </div>
-    <div class="btn-scroll-top">
-        <ion-icon name="chevron-up"></ion-icon>
-    </div>
-</div>
+    
+    
+    
+    
+  </div>
+</aside>
     </main>
 
     <footer>
     <div class="container-lg clearfix">
         <div class="col-12 footer">
-            <span>&copy; 2022 <a href="https://ibrights.github.io">Bright</a> |
-                基于 <a href="https://github.com/amzrk2/hugo-theme-fuji/"
-                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
-                   target="_blank">Hugo</a> 构建</span>
+            
+            <span>&copy; 2022
+                <a href="https://ibrights.github.io">Bright</a>
+                
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
         </div>
     </div>
 </footer>
+
     
-<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
 
 <script defer src="/assets/js/fuji.min.js"></script>
+
 
 
 </body>

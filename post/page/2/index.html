@@ -31,19 +31,12 @@
 <meta name="description" content="知识分享与微小叙事。" />
 
 
+<link rel="alternate" type="application/rss+xml" href="https://ibrights.github.io/post/index.xml" title="Bright's Blog" />
+
 <meta property="og:title" content="Posts" />
-<meta property="og:description" content="知识分享与微小叙事。" />
+<meta name="twitter:title" content="Posts" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://ibrights.github.io/post/" />
-<meta property="og:image" content="https://ibrights.github.io/images/logo.png"/>
-<meta property="og:updated_time" content="2022-04-09T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://ibrights.github.io/images/logo.png"/>
-
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="知识分享与微小叙事。"/>
-
+<meta property="og:url" content="https://ibrights.github.io/post/" /><meta name="twitter:card" content="summary" /><meta property="og:updated_time" content="2022-04-09T00:00:00+00:00" />
 
 
 <style>
@@ -59,11 +52,10 @@
 </style>
 
 
-<link rel="stylesheet" href="/assets/css/fuji.min.css" />
 
 
-<script async type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.esm.js"></script>
-<script async nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://ibrights.github.io/assets/css/fuji.min.css" />
+
 
 
 
@@ -80,9 +72,15 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173973117-1"></script>
 
 
+
+
+
 </head>
 
-<body data-theme="auto">
+<body
+  data-theme="auto"
+  data-theme-auto='false'
+  >
     <script data-cfasync="false">
   
   var fujiThemeData = localStorage.getItem('fuji_data-theme');
@@ -121,10 +119,15 @@
         <a href="https://ibrights.github.io/post/blog20210505/">桥接模式下 Openwrt 软路由直接访问光猫后台</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2021-05-05</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;872 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-05-05</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;872 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+
     </div>
     <div class="post-item post-summary markdown-body">
-        <p><img class="img-zoomable" src="/images/blog20210505/modem.jpg" alt="" />
+        <p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210505/modem.jpg" alt="" />
 </p>
 <p>光猫开启桥接模式后，软路由作为默认网关进行拨号与 NAT，导致客户端设备无法获取与光猫相同网段的 IP 地址，进而也就无法登陆光猫的后台管理界面。虽然在日常使用的过程中，光猫的配置几乎是一次性的，其后台管理界面的使用频率很低，但是每次登陆光猫后台都要通过有线或无线（若有）的方式将设备直接与光猫相连也着实麻烦。因此需要通过一些简单的配置，实现桥接模式下，连接软路由的同时可以随时访问光猫后台。</p>
     </div>
@@ -135,10 +138,15 @@
         <a href="https://ibrights.github.io/post/blog20210502/">利用 Parsec 实现远程游戏串流</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2021-05-02</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;1251 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-05-02</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1251 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+
     </div>
     <div class="post-item post-summary markdown-body">
-        <p><img class="img-zoomable" src="/images/blog20210502/Parsec.png" alt="" />
+        <p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210502/Parsec.png" alt="" />
 </p>
 <p>最近，我终于放弃了 Steam 或 Epic Games 等平台的买断制游戏模式，转而投靠了 <a href="https://www.xbox.com/zh-HK/xbox-game-pass" target="_blank">Xbox Game Pass (XGP)</a> 这样的订阅制模式。尽管买断制可以极大地满足“喜加一”式的收集欲，但自从开始实习之后，我已经很难抽出整块的时间来通关各类单机游戏，以致于我的游戏库中屯了大量已购买的但未通关的游戏，这不仅降低了我购买和尝试最新游戏的欲望，也在资金上造成了很大的浪费。不知从什么时候起，玩游戏竟也成了一种待完成的“任务”，失去了工作之余放松心情的初衷。</p>
     </div>
@@ -149,10 +157,15 @@
         <a href="https://ibrights.github.io/post/blog20210423/">解决蜗牛星际B双安装黑群晖失败“文件已损毁（13）”</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2021-04-23</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;734 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-04-23</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;734 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+
     </div>
     <div class="post-item post-summary markdown-body">
-        <p><img class="img-zoomable" src="/images/blog20210423/error13.png" alt="" />
+        <p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210423/error13.png" alt="" />
 </p>
 <p>去年疫情期间，由于滞留家中实在无聊，我开始折腾软路由和 DIY NAS，而被折腾得最多的莫过于黑<a href="https://www.synology.com/en-us/dsm" target="_blank">群晖</a>系统。为此，我特意买来两台蜗牛星际（B双和C），其中B双用作软路由，C则用于黑群晖。时隔一年，忙于工作的我已不再有闲暇时间折腾黑群晖，而出于对数据安全和便捷性的考虑，我于今年年初购买了一台威联通的 NAS 主机。俗话说得好，黑群晖折腾到头，就会转去白群辉。但奈何威联通的性价比要比群晖高太多，因此我只好无耻地叛变了革命。</p>
     </div>
@@ -163,7 +176,12 @@
         <a href="https://ibrights.github.io/post/blog20210416/">告别，为了新的开始：记一次迂回的返乡行</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2021-04-16</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;2410 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E6%97%A5%E8%AE%B0">日记</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-04-16</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;2410 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E6%97%A5%E8%AE%B0">日记</a>&nbsp;</span>
+
     </div>
     <div class="post-item post-summary markdown-body">
         <h1 id="起因">起因</h1>
@@ -176,126 +194,38 @@
         <a href="https://ibrights.github.io/post/blog20210413/">Openwrt Luci Openvpn 服务器多设备同时接入</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2021-04-13</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;807 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-04-13</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;807 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+
     </div>
     <div class="post-item post-summary markdown-body">
-        <p><img class="img-zoomable" src="/images/blog20210413/openvpn.png" alt="" />
+        <p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210413/openvpn.png" alt="" />
 </p>
 <p>我们日常使用的 Openwrt 软路由系统几乎都集成了 <a href="https://openwrt.org/docs/guide-user/luci/start" target="_blank">Luci 界面</a>，它不仅可以为用户提供便利的可视化后台管理界面，还在各路大神的贡献下，适配了众多简单易用的图形化 App。<a href="https://github.com/DavBfr/luci-app-openvpn-server" target="_blank">Luci-app-openvpn-server</a> 就是众多 Luci 应用中最常用的 VPN 服务器之一。</p>
     </div>
 </div>
-
-
-
-
-
-
-
-
-<div class="pagination">
-    
-    <div class="pag-first">
-        <a href="/post/"><ion-icon name="caret-back-circle"></ion-icon></a>
-    </div>
-    
-    
-    <div class="pag-previous">
-        <a href="/post/"><ion-icon name="chevron-back-circle"></ion-icon></a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item">
-        <a href="/post/">1</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item pag-current">
-        <a href="/post/page/2/">2</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item">
-        <a href="/post/page/3/">3</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item">
-        <a href="/post/page/4/">4</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item">
-        <a href="/post/page/5/">5</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-next">
-        <a href="/post/page/3/"><ion-icon name="chevron-forward-circle"></ion-icon></i></a>
-    </div>
-    
-    
-    <div class="pag-last">
-        <a href="/post/page/6/"><ion-icon name="caret-forward-circle"></ion-icon></a>
-    </div>
-    
-</div>
-
-
-
+<div class="pagination"><div class="pag-first">
+    <a href="/post/"><i class="iconfont icon-caret-back-circle-sharp"></i></a>
+  </div><div class="pag-previous">
+    <a href="/post/"><i class="iconfont icon-chevron-back-circle-sharp"></i></a>
+  </div><div class="pag-item">
+    <a href="/post/">1</a>
+  </div><div class="pag-item pag-current">
+    <a href="/post/page/2/">2</a>
+  </div><div class="pag-item">
+    <a href="/post/page/3/">3</a>
+  </div><div class="pag-item">
+    <a href="/post/page/4/">4</a>
+  </div><div class="pag-item">
+    <a href="/post/page/5/">5</a>
+  </div><div class="pag-next">
+    <a href="/post/page/3/"><i class="iconfont icon-chevron-forward-circle-sharp"></i></a>
+  </div><div class="pag-last">
+    <a href="/post/page/6/"><i class="iconfont icon-caret-forward-circle-sharp"></i></a>
+  </div></div>
             </div>
             <aside class="col-12 col-md-3 float-left sidebar">
     
@@ -317,6 +247,21 @@
             
             <li>
                 <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/ibrights/" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="mailto:brights2021@163.com" target="_blank"><span>Email</span></a>
             </li>
             
         </ul>
@@ -345,6 +290,48 @@
         </div>
     </div>
     
+    
+    
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
     <div class="sidebar-item sidebar-links">
         <h3>链接</h3>
         <ul>
@@ -360,37 +347,61 @@
         </ul>
     </div>
     
-    
-    
-    
-</aside>
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA/">时事评论</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/">科技分享</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+            </span>
+            
         </div>
-        <div class="btn">
-    <div class="btn-toggle-mode">
-        <ion-icon name="contrast"></ion-icon>
     </div>
-    <div class="btn-scroll-top">
-        <ion-icon name="chevron-up"></ion-icon>
-    </div>
-</div>
+    
+    
+    
+    
+  </div>
+</aside>
     </main>
 
     <footer>
     <div class="container-lg clearfix">
         <div class="col-12 footer">
-            <span>&copy; 2022 <a href="https://ibrights.github.io">Bright</a> |
-                基于 <a href="https://github.com/amzrk2/hugo-theme-fuji/"
-                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
-                   target="_blank">Hugo</a> 构建</span>
+            
+            <span>&copy; 2022
+                <a href="https://ibrights.github.io">Bright</a>
+                
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
         </div>
     </div>
 </footer>
+
     
-<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
 
 <script defer src="/assets/js/fuji.min.js"></script>
+
 
 
 </body>

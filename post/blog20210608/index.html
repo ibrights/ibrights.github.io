@@ -33,20 +33,12 @@
 
 <meta name="keywords" content="科技分享" />
 
+
 <meta property="og:title" content="实测苹果专用转接代理可用于翻墙，但中国大陆地区无法使用" />
-<meta property="og:description" content="日常技术记录" />
+<meta name="twitter:title" content="实测苹果专用转接代理可用于翻墙，但中国大陆地区无法使用" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ibrights.github.io/post/blog20210608/" />
-<meta property="og:image" content="https://ibrights.github.io/images/logo.png"/>
-<meta property="article:published_time" content="2021-06-08T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-06-08T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://ibrights.github.io/images/logo.png"/>
-
-<meta name="twitter:title" content="实测苹果专用转接代理可用于翻墙，但中国大陆地区无法使用"/>
-<meta name="twitter:description" content="日常技术记录"/>
-
+<meta property="og:url" content="https://ibrights.github.io/post/blog20210608/" /><meta property="og:description" content="日常技术记录" />
+<meta name="twitter:description" content="日常技术记录" /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2021-06-08T00:00:00+00:00" /><meta property="article:modified_time" content="2021-06-08T00:00:00+00:00" />
 
 
 <style>
@@ -62,11 +54,10 @@
 </style>
 
 
-<link rel="stylesheet" href="/assets/css/fuji.min.css" />
 
 
-<script async type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.esm.js"></script>
-<script async nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://ibrights.github.io/assets/css/fuji.min.css" />
+
 
 
 
@@ -83,9 +74,15 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173973117-1"></script>
 
 
+
+
+
 </head>
 
-<body data-theme="auto">
+<body
+  data-theme="auto"
+  data-theme-auto='false'
+  >
     <script data-cfasync="false">
   
   var fujiThemeData = localStorage.getItem('fuji_data-theme');
@@ -122,17 +119,21 @@
         <a href="https://ibrights.github.io/post/blog20210608/">实测苹果专用转接代理可用于翻墙，但中国大陆地区无法使用</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2021-06-08</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;908 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-06-08</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;908 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+
     </div>
     
-    
     <div class="post-content markdown-body">
-        <p><img class="img-zoomable" src="/images/blog20210608/wwdc2021.png" alt="" />
+        <p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210608/wwdc2021.png" alt="" />
 </p>
 <p>昨晚熬夜看了今年的 Apple <a href="https://developer.apple.com/wwdc21/" target="_blank">WWDC</a> 直播。虽然今年没有发布任何硬件设备，但 iOS 15 和 macOS Monterey 的一些新的功能特性确实解决了我的好几个痛点。</p>
 <p>一直以来，<strong>隐私保护都是苹果公司的宣传重点之一，以致于其越发严苛的隐私政策已经十足地损害了像 Facebook 和 Google 这种以收集用户数据为主要盈利方式的互联网巨头的利益</strong>。iOS 14.5 版本新增的“允许 App 请求跟踪”功能，就曾<a href="https://cn.wsj.com/articles/%e6%97%a0%e8%a7%86facebook%e5%8f%8d%e5%af%b9%ef%bc%8c%e8%8b%b9%e6%9e%9c%e5%85%ac%e5%8f%b8%e5%b0%86%e6%8e%a8%e5%87%ba%e6%96%b0%e7%9a%84%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%8e%aa%e6%96%bd-11611818710" target="_blank">遭到 Facebook 的强烈反对</a>。</p>
 <p>针对用户隐私保护，苹果在今年的 WWDC 上公布了全新的 iCloud+ 服务。在订阅价格保持不变的前提下，iCloud 加入了“Homekit 安全摄像头”、“邮件隐私保护”和“专用转接代理（Privacy Relay）”等功能。前两项功能的字面意思都很好理解，那这最后一个“专用转接代理”又是什么东西呢？</p>
-<p><img class="img-zoomable" src="/images/blog20210608/iCloud&#43;.jpg" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20210608/iCloud&#43;.jpg" alt="" />
 </p>
 <p>其实，看到“代理“两个字时应该就不难猜到，所谓的”专用转接代理“，就是一个类似于 VPN 的服务。当这个功能被开启时， Safari 浏览器的所有流量都将由苹果的服务器进行“转接”，从而达到隐藏用户真实 ip 地址的目的。</p>
 <p>既然 Safari 浏览器的流量都由苹果的服务器转接，那么我们是否可以通过开启“专用转接代理”的方式来访问被 GFW 封锁的网站呢？单从理论上来说，答案是肯定的。但是，根据<a href="https://www.bbc.com/zhongwen/simp/world-57410275" target="_blank">各大外媒的报道</a>，苹果已经主动表示，依据相关国家的政策，专用转接代理功能不对包括<strong>白俄罗斯、哥伦比亚、埃及、哈萨克斯坦、沙特阿拉伯、南非、土库曼斯坦、乌干达、菲律宾，以及中国</strong>在内的国家和地区开放。</p>
@@ -177,6 +178,21 @@
         </ul>
     </div>
     
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/ibrights/" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="mailto:brights2021@163.com" target="_blank"><span>Email</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
     <div class="sidebar-item sidebar-tags">
         <h3>标签</h3>
         <div>
@@ -200,6 +216,46 @@
         </div>
     </div>
     
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
     <div class="sidebar-item sidebar-links">
         <h3>链接</h3>
         <ul>
@@ -215,37 +271,61 @@
         </ul>
     </div>
     
-    
-    
-    
-</aside>
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA/">时事评论</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/">科技分享</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+            </span>
+            
         </div>
-        <div class="btn">
-    <div class="btn-toggle-mode">
-        <ion-icon name="contrast"></ion-icon>
     </div>
-    <div class="btn-scroll-top">
-        <ion-icon name="chevron-up"></ion-icon>
-    </div>
-</div>
+    
+    
+    
+    
+  </div>
+</aside>
     </main>
 
     <footer>
     <div class="container-lg clearfix">
         <div class="col-12 footer">
-            <span>&copy; 2022 <a href="https://ibrights.github.io">Bright</a> |
-                基于 <a href="https://github.com/amzrk2/hugo-theme-fuji/"
-                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
-                   target="_blank">Hugo</a> 构建</span>
+            
+            <span>&copy; 2022
+                <a href="https://ibrights.github.io">Bright</a>
+                
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
         </div>
     </div>
 </footer>
+
     
-<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
 
 <script defer src="/assets/js/fuji.min.js"></script>
+
 
 
 </body>

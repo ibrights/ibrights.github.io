@@ -33,20 +33,12 @@
 
 <meta name="keywords" content="科技分享" />
 
+
 <meta property="og:title" content="通过 Home Assistant 搭建智能家居中枢" />
-<meta property="og:description" content="日常技术记录" />
+<meta name="twitter:title" content="通过 Home Assistant 搭建智能家居中枢" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ibrights.github.io/post/blog20220409/" />
-<meta property="og:image" content="https://ibrights.github.io/images/logo.png"/>
-<meta property="article:published_time" content="2022-04-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-04-09T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://ibrights.github.io/images/logo.png"/>
-
-<meta name="twitter:title" content="通过 Home Assistant 搭建智能家居中枢"/>
-<meta name="twitter:description" content="日常技术记录"/>
-
+<meta property="og:url" content="https://ibrights.github.io/post/blog20220409/" /><meta property="og:description" content="日常技术记录" />
+<meta name="twitter:description" content="日常技术记录" /><meta name="twitter:card" content="summary" /><meta property="article:published_time" content="2022-04-09T00:00:00+00:00" /><meta property="article:modified_time" content="2022-04-09T00:00:00+00:00" />
 
 
 <style>
@@ -62,11 +54,10 @@
 </style>
 
 
-<link rel="stylesheet" href="/assets/css/fuji.min.css" />
 
 
-<script async type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.esm.js"></script>
-<script async nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://ibrights.github.io/assets/css/fuji.min.css" />
+
 
 
 
@@ -83,9 +74,15 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173973117-1"></script>
 
 
+
+
+
 </head>
 
-<body data-theme="auto">
+<body
+  data-theme="auto"
+  data-theme-auto='false'
+  >
     <script data-cfasync="false">
   
   var fujiThemeData = localStorage.getItem('fuji_data-theme');
@@ -122,13 +119,17 @@
         <a href="https://ibrights.github.io/post/blog20220409/">通过 Home Assistant 搭建智能家居中枢</a>
     </h2>
     <div class="post-item post-meta">
-        <span><ion-icon name="today"></ion-icon>&nbsp;2022-04-09</span><span><ion-icon name="file-tray"></ion-icon>&nbsp;1595 字</span><span><ion-icon name="pricetags"></ion-icon>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2022-04-09</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1595 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
+
     </div>
-    
     
     <div class="post-content markdown-body">
         <h2 id="背景">背景</h2>
-<p><img class="img-zoomable" src="/images/blog20220409/HA.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20220409/HA.png" alt="" />
 </p>
 <p>随着智能家居的日益普及，各大互联网巨头纷纷进场，导致智能家居的平台和品牌越来越多，且各个平台和品牌间的产品无法互通。例如，你无法用米家的智能开关来控制 homekit 的智能灯，除非你的产品支持双平台，但目前同时支持两个以上平台的智能家居少之又少。</p>
 <p><a href="https://www.home-assistant.io/" target="_blank">Home Assistant</a>（以下简称 HA）很好地解决了智能家居平台不互通的问题，它是一个开源的智能家居集成平台，可将各个常见平台的产品接入，并通过网页、<a href="https://apps.apple.com/us/app/home-assistant/id1099568401" target="_blank">手机app</a>等多种客户端统一操控，实现真正的「万物互联」。并且最重要的是，这么好用的工具不仅支持 Windows、MacOS、Linux 等多种操作系统，其本身也是开源免费的，并且其极高的扩展性也为爱折腾的数码爱好者提供了全新的研究对象。</p>
@@ -137,25 +138,25 @@
 <p>提到 Linux，我们就不得不提 Docker，它是一种兼容性极高的容器系统，可以适应几乎所有 Linux 环境，做到即装即用。今天，我们将着重介绍通过 Docker 容器部署 HA 的方法。</p>
 <p>我的<a href="https://ibrights.github.io/post/blog20210909/" target="_blank">这篇文章</a>详细介绍了 <a href="https://hub.docker.com/r/portainer/portainer-ce" target="_blank">Portainer</a> 这个非常好用的 Docker 管理容器，<strong>由于每位读者的系统环境不尽相同，因此本博客往后介绍的所有 Docker 容器安装，不再拘泥于群晖、威联通或者 Unraid，而是统一通过 Portainer 进行</strong>。</p>
 <p>Portainer 本身的安装可以参考上面提到的文章，本文不再赘述。要安装 HA，我们首先需要登录 Portainer 后台，然后进入本地终端界面，也就是 Local，接着点击左侧的 Containers，进入本地容器管理界面。</p>
-<p><img class="img-zoomable" src="/images/blog20220409/portainer01.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20220409/portainer01.png" alt="" />
 </p>
 <p>点击 Add container，创建一个新容器，Name 随便填，Image 写 HA 官方提供的映像索引 <code>homeassistant/home-assistant:latest</code>，Always pull the image 可以打开，这样以后每次修改容器配置，都会从服务器重新拉取最新的映像。</p>
-<p><img class="img-zoomable" src="/images/blog20220409/portainer02.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20220409/portainer02.png" alt="" />
 </p>
 <p>接着点击下方 Advanced container settings 中的 Volumes，进入目录映射选项卡，点击 map additional volume 按钮新增一个目录映射，右侧的映射方式选 bind，container 里的目录只能写 <code>/config</code>，这是 HA 配置文件的所在目录，host 上的目录可以根据自己需要填写。</p>
-<p><img class="img-zoomable" src="/images/blog20220409/portainer03.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20220409/portainer03.png" alt="" />
 </p>
 <p>继续点击 Advanced container settings 中的 Env，进入环境变量选项卡，点击 add environment variable 按钮新增一条环境变量，左侧的 name 填写 <code>TZ</code>，右侧的 value 填写 <code>Asia/Shanghai</code>，这是将 HA 的默认时区（Time Zone）设置为亚洲/上海。</p>
-<p><img class="img-zoomable" src="/images/blog20220409/portainer04.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20220409/portainer04.png" alt="" />
 </p>
 <p>剩下的高级设置就比较简单了，Network 设置成 host，Restart policy 设置成 Always 即可。最后点击 Deploy the container，等待一段时间，如果网络连接通畅的话，即可完成 HA 容器的部署。</p>
 <p>HA 的后台默认端口是 8123，因此只要我们在局域网中访问 HA 运行设备的 <code>ip地址:8123</code> 即可登录 HA 的网页端。初次打开 HA 网页端需要进行一些基本的初始化配置，例如用户名、密码这些，此处不再赘述。需要注意的是，<strong>HA 管理员账户的密码无法找回，如果我们忘记此处设置的密码，后面只能通过重装容器的方式解决</strong>。</p>
 <h2 id="安装-hacs-集成">安装 HACS 集成</h2>
 <p><a href="https://hacs.xyz" target="_blank">HACS</a> 的全称是 Home Assistant Community Store，是一个 HA 社区商店，里面提供了各种外观主题，以及第三方集成的下载，使用起来非常方面，建议所有 HA 用户安装。</p>
-<p><img class="img-zoomable" src="/images/blog20220409/hacs.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20220409/hacs.png" alt="" />
 </p>
 <p>要安装 HACS，首先需要将它的安装包放入 HA 容器。在 HA 映射的 /config 目录中创建两个新目录，名称分别为 <code>www</code> 和 <code>custom components</code>，点击<a href="/resources/blog20220409/hacs.zip">这里</a>下载 HACS 安装包，将压缩包内的 hacs 目录解压到刚刚创建的 <code>personal components</code> 目录，然后重启 HA 容器。登录 HA 网页端，依次点击左下角配置—设备与服务—集成，进入集成选项卡。</p>
-<p><img class="img-zoomable" src="/images/blog20220409/ha01.png" alt="" />
+<p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20220409/ha01.png" alt="" />
 </p>
 <p>点击右下角的添加集成按钮，搜索 HACS，点击安装 HACS 集成，接着按照提示走流程就能顺利安装。安装过程中需要跳转登录一次 Github，如果没有账号需要注册一个。此外就是安装过程需要科学的网络环境，这个只能靠各位自行解决。安装完成后再次重启 HA 容器。不出意外的话，网页端的左侧会多出一个 HACS 按钮，点击它就能进入 HACS 的商店界面了。</p>
     </div>
@@ -197,6 +198,21 @@
         </ul>
     </div>
     
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/ibrights/" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="mailto:brights2021@163.com" target="_blank"><span>Email</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
     <div class="sidebar-item sidebar-tags">
         <h3>标签</h3>
         <div>
@@ -220,6 +236,46 @@
         </div>
     </div>
     
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
     <div class="sidebar-item sidebar-links">
         <h3>链接</h3>
         <ul>
@@ -235,37 +291,61 @@
         </ul>
     </div>
     
-    
-    
-    
-</aside>
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA/">时事评论</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB/">科技分享</a>
+            </span>
+            
+            <span>
+                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+            </span>
+            
         </div>
-        <div class="btn">
-    <div class="btn-toggle-mode">
-        <ion-icon name="contrast"></ion-icon>
     </div>
-    <div class="btn-scroll-top">
-        <ion-icon name="chevron-up"></ion-icon>
-    </div>
-</div>
+    
+    
+    
+    
+  </div>
+</aside>
     </main>
 
     <footer>
     <div class="container-lg clearfix">
         <div class="col-12 footer">
-            <span>&copy; 2022 <a href="https://ibrights.github.io">Bright</a> |
-                基于 <a href="https://github.com/amzrk2/hugo-theme-fuji/"
-                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
-                   target="_blank">Hugo</a> 构建</span>
+            
+            <span>&copy; 2022
+                <a href="https://ibrights.github.io">Bright</a>
+                
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
         </div>
     </div>
 </footer>
+
     
-<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
 
 <script defer src="/assets/js/fuji.min.js"></script>
+
 
 
 </body>
