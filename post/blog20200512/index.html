@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.74.2" />
+<meta name="generator" content="Hugo 0.98.0" />
 
 
 
@@ -121,7 +121,7 @@
     <div class="post-item post-meta">
         <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-05-12</span>
 
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1598 字</span>
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1597 字</span>
 
 <span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/%E7%A7%91%E6%8A%80%E5%88%86%E4%BA%AB">科技分享</a>&nbsp;</span>
 
@@ -142,7 +142,7 @@
 <p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20200512/Snipaste_2020-05-13_10-29-50.jpeg" alt="" />
 </p>
 <p>关于 Calibre Web 的搭建方法，网络上有很多前辈们撰写的教程，他们已经说得非常详细了。首先，你必须拥有一台能够稳定运行的服务器或 NAS（其实任意一台普通电脑都是可以的，只要你舍得让它 7*24 小时运行）。然后，你需要在你的设备上搭建一个 <a href="https://www.docker.com/" title="docker 官网" target="_blank">docker</a> 环境，因为 Calibre Web 需要 docker 作为运行的载体。最后，经过简单的安装和配置，你就可以拥有一个属于自己的电子书管理网站了。</p>
-<p>这里以<a href="https://www.synology.cn/zh-cn" title="群辉官网" target="_blank">群辉</a>为例。首先在“控制面板”中创建一个新的共享文件夹，用于存放 Calibre Web 的数据库和电子书资源。我这里将它命名为&quot;Books&rdquo;。创建完成后切记要开放该文件夹对所有用户的读写权限，否则 Calibre Web 将无法正常运行。</p>
+<p>这里以<a href="https://www.synology.cn/zh-cn" title="群辉官网" target="_blank">群辉</a>为例。首先在“控制面板”中创建一个新的共享文件夹，用于存放 Calibre Web 的数据库和电子书资源。我这里将它命名为&quot;Books&quot;。创建完成后切记要开放该文件夹对所有用户的读写权限，否则 Calibre Web 将无法正常运行。</p>
 <p><img class="img-zoomable" src="https://ibrights.github.io/images/blog20200512/Snipaste_2020-05-13_10-59-19.jpeg" alt="" />
 </p>
 <p>共享文件夹配置完成后，在群辉的套件中心中选择安装 docker 并打开它。再在“注册表”页面中搜索“Calibre-web”，此处途中框选的三个镜像都可以下载，它们的区别并不大，这里主要推荐 linuxserver/Clibre-web，在双击后弹出的对话框中选择“latest”并点“确定”开始下载。</p>

@@ -5,10 +5,6 @@
     <link>https://ibrights.github.io/search/</link>
     <description>Recent content in Search on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-hans</language>
-    
-	<atom:link href="https://ibrights.github.io/search/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-hans</language><atom:link href="https://ibrights.github.io/search/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
