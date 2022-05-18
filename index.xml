@@ -6,7 +6,27 @@
     <description>Recent content on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Sat, 09 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ibrights.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ibrights.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何配置路由器的 DHCP ?</title>
+      <link>https://ibrights.github.io/post/blog20220518/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ibrights.github.io/post/blog20220518/</guid>
+      <description>&lt;h2 id=&#34;开场&#34;&gt;开场&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;https://ibrights.github.io/images/blog20220518/dhcp.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;各位同学大家好，欢迎来到我的频道。经常折腾家里网络的你，一定经常遇到这些问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;为什么明明插上了网线，却&lt;strong&gt;打不开&lt;/strong&gt;路由器的后台？&lt;/li&gt;
+&lt;li&gt;为什么 NAS 的 IP 地址经常&lt;strong&gt;变化&lt;/strong&gt;？&lt;/li&gt;
+&lt;li&gt;为什么用上了高价的软路由，打开网页的速度反而&lt;strong&gt;变慢&lt;/strong&gt;？&lt;/li&gt;
+&lt;li&gt;为什么跟着大佬的视频一通配置，却还是玩不转&lt;strong&gt;旁路由&lt;/strong&gt;？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上这些问题其实都和 DHCP 有关。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>通过 Home Assistant 搭建智能家居中枢</title>
       <link>https://ibrights.github.io/post/blog20220409/</link>
@@ -90,7 +110,7 @@
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ibrights.github.io/about/</guid>
-      <description>关于我 一个为了自己与家庭的未来而努力谋生的90后，曾因出差走过十个省，稍微带点理想主义。 虽是法律硕士毕业，但总想往媒体界插一脚。 自诩热爱历史与文学，对 IT 也颇有兴趣，可惜数学不好。 利用业余时间参与制作《东亚观察局》，以选出令人惊艳的片尾曲为乐。 希望未来能利用空闲时间写点法律科普文，并做成音频以供传播，系列名称暂定为《议正言辞（Bright&amp;rsquo;s Tal</description>
+      <description>关于我 一个为了自己与家庭的未来而努力谋生的90后，曾因出差走过十个省，稍微带点理想主义。 虽是法律硕士毕业，但总想往媒体界插一脚。 自诩热爱历史与文学，对 IT 也颇有兴趣，可惜数学不好。 利用业余时间参与制作《东亚观察局》，以选出令人惊艳的片尾曲为乐。 最近开通了自己的 YouTube 频道，名称暂定为 Bright Chan。 关于本博客 本博客用于记录一些零碎的新知识，以及偶有的牢骚和絮叨。 它不具备</description>
     </item>
     
     <item>
