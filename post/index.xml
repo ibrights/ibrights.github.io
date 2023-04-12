@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Bright&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ibrights.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ibrights.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自由、荒诞与虚无</title>
+      <link>https://ibrights.github.io/post/blog20230121/</link>
+      <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://ibrights.github.io/post/blog20230121/</guid>
+      <description>2022年，我们的生活有很多变化。比如城市里消失了多年的爆竹声，今年终于又回来了。尽管官方一再严令禁止，但不管是人们心中压抑已久的情绪，还是这片土地绵延千年的古老传统，都是无法抹销的。 2022年，我们见证了文明的低谷。黄钟毁弃，瓦釜雷鸣，无数人在权力的倾轧中痛苦煎熬。但好在无声处总有惊雷，文明衰落的曲线总有暂时的反弹。可能不会有人料到，乌鲁木齐的大火会蔓延全</description>
+    </item>
+    
     <item>
       <title>如何配置路由器的 DHCP ?</title>
       <link>https://ibrights.github.io/post/blog20220518/</link>
