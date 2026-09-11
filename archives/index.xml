@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
   <channel>
-    <title>Archives on Bright&#39;s Blog</title>
-    <link>https://ibrights.github.io/archives/</link>
-    <description>Recent content in Archives on Bright&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-hans</language><atom:link href="https://ibrights.github.io/archives/index.xml" rel="self" type="application/rss+xml" />
+    <title>Bright → Mason · 博客迁移说明</title>
+    <link>https://masonhu.cc/</link>
+    <description>旧账号已找回，博客将继续在 masonhu.cc 更新。</description>
+    <language>zh-CN</language>
+    <item>
+      <title>老朋友，我们在新址见</title>
+      <link>https://masonhu.cc/</link>
+      <guid isPermaLink="false">brights-blog-moved-to-mason</guid>
+      <description>Bright 和 Mason 是同一个人。过往文章已迁往新博客；如今旧账号已找回，但新博客已经持续维护了更长时间，今后仍在 https://masonhu.cc/ 更新。请更新收藏与订阅。</description>
+    </item>
   </channel>
 </rss>
