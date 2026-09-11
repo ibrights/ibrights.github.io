@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bright → Mason · 博客迁移说明</title>
     <link>https://masonhu.cc/</link>
-    <description>旧账号已找回，博客将继续在 masonhu.cc 更新。</description>
+    <description>旧账号已找回，博客将继续在 masonhu.cc 更新。请改为订阅 https://masonhu.cc/index.xml 。</description>
     <language>zh-CN</language>
+    <lastBuildDate>Fri, 11 Sep 2026 02:00:30 GMT</lastBuildDate>
+    <atom:link href="https://ibrights.github.io/search/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>老朋友，我们在新址见</title>
-      <link>https://masonhu.cc/</link>
-      <guid isPermaLink="false">brights-blog-moved-to-mason</guid>
-      <description>Bright 和 Mason 是同一个人。过往文章已迁往新博客；如今旧账号已找回，但新博客已经持续维护了更长时间，今后仍在 https://masonhu.cc/ 更新。请更新收藏与订阅。</description>
+      <title>博客已迁移，请更新 RSS 订阅地址</title>
+      <link>https://ibrights.github.io/</link>
+      <guid isPermaLink="false">brights-blog-rss-migration-notice-v2</guid>
+      <pubDate>Fri, 11 Sep 2026 02:00:30 GMT</pubDate>
+      <description><![CDATA[
+        <p>Bright 和 Mason 是同一个人。2024 年，因旧 GitHub 账号无法完成双重认证，我将博客迁往 masonhu.cc，并把笔名改为 Mason。</p>
+        <p>如今旧账号已经找回，但新博客持续维护了更长时间，今后的文章仍会在那里更新。旧站的 RSS 将保留这则迁移通知。</p>
+        <p>请在阅读器中添加新订阅：<a href="https://masonhu.cc/index.xml">https://masonhu.cc/index.xml</a>，然后取消旧订阅。</p>
+        <p><a href="https://masonhu.cc/">前往 Mason 博客</a> · <a href="https://masonhu.cc/post/blog20241226/">阅读迁移故事</a></p>
+      ]]></description>
     </item>
   </channel>
 </rss>
